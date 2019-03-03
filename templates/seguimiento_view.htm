@@ -1,0 +1,458 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel seguimiento view}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+
+	<div class="container">
+					{BEGIN VALORACION1_fieldblock}
+	<div class="{$fielddispclass_VALORACION1} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION1">
+		<label class="control-label" for="{$labelfor_VALORACION1}">
+			{$label seguimiento VALORACION1}
+		</label>
+		<div class="" >
+			{$VALORACION1_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION1_fieldblock}
+					{BEGIN VALORACION2_fieldblock}
+	<div class="{$fielddispclass_VALORACION2} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION2">
+		<label class="control-label" for="{$labelfor_VALORACION2}">
+			{$label seguimiento VALORACION2}
+		</label>
+		<div class="" >
+			{$VALORACION2_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION2_fieldblock}
+					{BEGIN VALORACION3_fieldblock}
+	<div class="{$fielddispclass_VALORACION3} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION3">
+		<label class="control-label" for="{$labelfor_VALORACION3}">
+			{$label seguimiento VALORACION3}
+		</label>
+		<div class="" >
+			{$VALORACION3_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION3_fieldblock}
+					{BEGIN VALORACION4_fieldblock}
+	<div class="{$fielddispclass_VALORACION4} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION4">
+		<label class="control-label" for="{$labelfor_VALORACION4}">
+			{$label seguimiento VALORACION4}
+		</label>
+		<div class="" >
+			{$VALORACION4_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION4_fieldblock}
+					{BEGIN VALORACION5_fieldblock}
+	<div class="{$fielddispclass_VALORACION5} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION5">
+		<label class="control-label" for="{$labelfor_VALORACION5}">
+			{$label seguimiento VALORACION5}
+		</label>
+		<div class="" >
+			{$VALORACION5_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION5_fieldblock}
+					{BEGIN VALORACION6_fieldblock}
+	<div class="{$fielddispclass_VALORACION6} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION6">
+		<label class="control-label" for="{$labelfor_VALORACION6}">
+			{$label seguimiento VALORACION6}
+		</label>
+		<div class="" >
+			{$VALORACION6_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION6_fieldblock}
+					{BEGIN VALORACION7_fieldblock}
+	<div class="{$fielddispclass_VALORACION7} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION7">
+		<label class="control-label" for="{$labelfor_VALORACION7}">
+			{$label seguimiento VALORACION7}
+		</label>
+		<div class="" >
+			{$VALORACION7_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION7_fieldblock}
+					{BEGIN VALORACION8_fieldblock}
+	<div class="{$fielddispclass_VALORACION8} col-md-6 bs-viewcontrolgroup" data-fieldname="VALORACION8">
+		<label class="control-label" for="{$labelfor_VALORACION8}">
+			{$label seguimiento VALORACION8}
+		</label>
+		<div class="" >
+			{$VALORACION8_value}&nbsp;
+		</div>
+	</div>
+{END VALORACION8_fieldblock}
+					{BEGIN SUMATORIA_fieldblock}
+	<div class="{$fielddispclass_SUMATORIA} col-md-6 bs-viewcontrolgroup" data-fieldname="SUMATORIA">
+		<label class="control-label" for="{$labelfor_SUMATORIA}">
+			{$label seguimiento SUMATORIA}
+		</label>
+		<div class="" >
+			{$SUMATORIA_value}&nbsp;
+		</div>
+	</div>
+{END SUMATORIA_fieldblock}
+					{BEGIN RENDIMIENTO_fieldblock}
+	<div class="{$fielddispclass_RENDIMIENTO} col-md-6 bs-viewcontrolgroup" data-fieldname="RENDIMIENTO">
+		<label class="control-label" for="{$labelfor_RENDIMIENTO}">
+			{$label seguimiento RENDIMIENTO}
+		</label>
+		<div class="" >
+			{$RENDIMIENTO_value}&nbsp;
+		</div>
+	</div>
+{END RENDIMIENTO_fieldblock}
+					{BEGIN CODCASO_fieldblock}
+	<div class="{$fielddispclass_CODCASO} col-md-6 bs-viewcontrolgroup" data-fieldname="CODCASO">
+		<label class="control-label" for="{$labelfor_CODCASO}">
+			{$label seguimiento CODCASO}
+		</label>
+		<div class="" >
+			{$CODCASO_value}&nbsp;
+		</div>
+	</div>
+{END CODCASO_fieldblock}
+					{BEGIN DOCENTE_fieldblock}
+	<div class="{$fielddispclass_DOCENTE} col-md-6 bs-viewcontrolgroup" data-fieldname="DOCENTE">
+		<label class="control-label" for="{$labelfor_DOCENTE}">
+			{$label seguimiento DOCENTE}
+		</label>
+		<div class="" >
+			{$DOCENTE_value}&nbsp;
+		</div>
+	</div>
+{END DOCENTE_fieldblock}
+					{BEGIN ASPECTOS1_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS1} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS1">
+		<label class="control-label" for="{$labelfor_ASPECTOS1}">
+			{$label seguimiento ASPECTOS1}
+		</label>
+		<div class="" >
+			{$ASPECTOS1_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS1_fieldblock}
+					{BEGIN DESCIPCION1_fieldblock}
+	<div class="{$fielddispclass_DESCIPCION1} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCIPCION1">
+		<label class="control-label" for="{$labelfor_DESCIPCION1}">
+			{$label seguimiento DESCIPCION1}
+		</label>
+		<div class="" >
+			{$DESCIPCION1_value}&nbsp;
+		</div>
+	</div>
+{END DESCIPCION1_fieldblock}
+					{BEGIN ASPECTOS2_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS2} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS2">
+		<label class="control-label" for="{$labelfor_ASPECTOS2}">
+			{$label seguimiento ASPECTOS2}
+		</label>
+		<div class="" >
+			{$ASPECTOS2_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS2_fieldblock}
+					{BEGIN DESCRIPCION2_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION2} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION2">
+		<label class="control-label" for="{$labelfor_DESCRIPCION2}">
+			{$label seguimiento DESCRIPCION2}
+		</label>
+		<div class="" >
+			{$DESCRIPCION2_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION2_fieldblock}
+					{BEGIN ASPECTOS3_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS3} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS3">
+		<label class="control-label" for="{$labelfor_ASPECTOS3}">
+			{$label seguimiento ASPECTOS3}
+		</label>
+		<div class="" >
+			{$ASPECTOS3_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS3_fieldblock}
+					{BEGIN DESCRIPCION5_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION5} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION5">
+		<label class="control-label" for="{$labelfor_DESCRIPCION5}">
+			{$label seguimiento DESCRIPCION5}
+		</label>
+		<div class="" >
+			{$DESCRIPCION5_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION5_fieldblock}
+					{BEGIN DESCRIPCION6_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION6} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION6">
+		<label class="control-label" for="{$labelfor_DESCRIPCION6}">
+			{$label seguimiento DESCRIPCION6}
+		</label>
+		<div class="" >
+			{$DESCRIPCION6_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION6_fieldblock}
+					{BEGIN ASPECTOS6_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS6} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS6">
+		<label class="control-label" for="{$labelfor_ASPECTOS6}">
+			{$label seguimiento ASPECTOS6}
+		</label>
+		<div class="" >
+			{$ASPECTOS6_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS6_fieldblock}
+					{BEGIN ASPECTOS7_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS7} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS7">
+		<label class="control-label" for="{$labelfor_ASPECTOS7}">
+			{$label seguimiento ASPECTOS7}
+		</label>
+		<div class="" >
+			{$ASPECTOS7_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS7_fieldblock}
+					{BEGIN DESCRIPCION7_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION7} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION7">
+		<label class="control-label" for="{$labelfor_DESCRIPCION7}">
+			{$label seguimiento DESCRIPCION7}
+		</label>
+		<div class="" >
+			{$DESCRIPCION7_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION7_fieldblock}
+					{BEGIN ASPECTOS8_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS8} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS8">
+		<label class="control-label" for="{$labelfor_ASPECTOS8}">
+			{$label seguimiento ASPECTOS8}
+		</label>
+		<div class="" >
+			{$ASPECTOS8_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS8_fieldblock}
+					{BEGIN DESCRIPCION8_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION8} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION8">
+		<label class="control-label" for="{$labelfor_DESCRIPCION8}">
+			{$label seguimiento DESCRIPCION8}
+		</label>
+		<div class="" >
+			{$DESCRIPCION8_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION8_fieldblock}
+					{BEGIN DESCIPCION3_fieldblock}
+	<div class="{$fielddispclass_DESCIPCION3} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCIPCION3">
+		<label class="control-label" for="{$labelfor_DESCIPCION3}">
+			{$label seguimiento DESCIPCION3}
+		</label>
+		<div class="" >
+			{$DESCIPCION3_value}&nbsp;
+		</div>
+	</div>
+{END DESCIPCION3_fieldblock}
+					{BEGIN DESCRIPCION4_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION4} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION4">
+		<label class="control-label" for="{$labelfor_DESCRIPCION4}">
+			{$label seguimiento DESCRIPCION4}
+		</label>
+		<div class="" >
+			{$DESCRIPCION4_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION4_fieldblock}
+					{BEGIN ASPECTOS4_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS4} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS4">
+		<label class="control-label" for="{$labelfor_ASPECTOS4}">
+			{$label seguimiento ASPECTOS4}
+		</label>
+		<div class="" >
+			{$ASPECTOS4_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS4_fieldblock}
+					{BEGIN ASPECTOS5_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS5} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS5">
+		<label class="control-label" for="{$labelfor_ASPECTOS5}">
+			{$label seguimiento ASPECTOS5}
+		</label>
+		<div class="" >
+			{$ASPECTOS5_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS5_fieldblock}
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-6 "> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>Close window</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="   col-md-4 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>Edit</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

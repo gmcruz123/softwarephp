@@ -1,0 +1,233 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel ESTUDIANTESACARGO print}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN NOMBRE_fieldheadercolumn}
+			<th class="{$NOMBRE_class}" {$NOMBRE_style}  data-field="NOMBRE">
+				{$label ESTUDIANTESACARGO NOMBRE}
+			</th>
+			{END NOMBRE_fieldheadercolumn}
+			{BEGIN FECHANACIMIENTO_fieldheadercolumn}
+			<th class="{$FECHANACIMIENTO_class}" {$FECHANACIMIENTO_style}  data-field="FECHANACIMIENTO">
+				{$label ESTUDIANTESACARGO FECHANACIMIENTO}
+			</th>
+			{END FECHANACIMIENTO_fieldheadercolumn}
+			{BEGIN DIRECCION_fieldheadercolumn}
+			<th class="{$DIRECCION_class}" {$DIRECCION_style}  data-field="DIRECCION">
+				{$label ESTUDIANTESACARGO DIRECCION}
+			</th>
+			{END DIRECCION_fieldheadercolumn}
+			{BEGIN TELEFONO_fieldheadercolumn}
+			<th class="{$TELEFONO_class}" {$TELEFONO_style}  data-field="TELEFONO">
+				{$label ESTUDIANTESACARGO TELEFONO}
+			</th>
+			{END TELEFONO_fieldheadercolumn}
+			{BEGIN DIAGNOSTICO_fieldheadercolumn}
+			<th class="{$DIAGNOSTICO_class}" {$DIAGNOSTICO_style}  data-field="DIAGNOSTICO">
+				{$label ESTUDIANTESACARGO DIAGNOSTICO}
+			</th>
+			{END DIAGNOSTICO_fieldheadercolumn}
+			{BEGIN NOMBREDELPADRE_fieldheadercolumn}
+			<th class="{$NOMBREDELPADRE_class}" {$NOMBREDELPADRE_style}  data-field="NOMBREDELPADRE">
+				{$label ESTUDIANTESACARGO NOMBREDELPADRE}
+			</th>
+			{END NOMBREDELPADRE_fieldheadercolumn}
+			{BEGIN NOMBREDELAMADRE_fieldheadercolumn}
+			<th class="{$NOMBREDELAMADRE_class}" {$NOMBREDELAMADRE_style}  data-field="NOMBREDELAMADRE">
+				{$label ESTUDIANTESACARGO NOMBREDELAMADRE}
+			</th>
+			{END NOMBREDELAMADRE_fieldheadercolumn}
+			{BEGIN NOMBREACUDIENTE_fieldheadercolumn}
+			<th class="{$NOMBREACUDIENTE_class}" {$NOMBREACUDIENTE_style}  data-field="NOMBREACUDIENTE">
+				{$label ESTUDIANTESACARGO NOMBREACUDIENTE}
+			</th>
+			{END NOMBREACUDIENTE_fieldheadercolumn}
+			{BEGIN HABILIDADES_fieldheadercolumn}
+			<th class="{$HABILIDADES_class}" {$HABILIDADES_style}  data-field="HABILIDADES">
+				{$label ESTUDIANTESACARGO HABILIDADES}
+			</th>
+			{END HABILIDADES_fieldheadercolumn}
+			{BEGIN LIMITACIONES_fieldheadercolumn}
+			<th class="{$LIMITACIONES_class}" {$LIMITACIONES_style}  data-field="LIMITACIONES">
+				{$label ESTUDIANTESACARGO LIMITACIONES}
+			</th>
+			{END LIMITACIONES_fieldheadercolumn}
+			{BEGIN DOCENTEACARGO_fieldheadercolumn}
+			<th class="{$DOCENTEACARGO_class}" {$DOCENTEACARGO_style}  data-field="DOCENTEACARGO">
+				{$label ESTUDIANTESACARGO DOCENTEACARGO}
+			</th>
+			{END DOCENTEACARGO_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN NOMBRE_fieldcolumn}
+			<td  class="{$NOMBRE_class}" {$NOMBRE_style} {$recordattrs}>
+				{$NOMBRE_value}
+			</td>
+			{END NOMBRE_fieldcolumn}
+			{BEGIN FECHANACIMIENTO_fieldcolumn}
+			<td  class="{$FECHANACIMIENTO_class}" {$FECHANACIMIENTO_style} {$recordattrs}>
+				{$FECHANACIMIENTO_value}
+			</td>
+			{END FECHANACIMIENTO_fieldcolumn}
+			{BEGIN DIRECCION_fieldcolumn}
+			<td  class="{$DIRECCION_class}" {$DIRECCION_style} {$recordattrs}>
+				{$DIRECCION_value}
+			</td>
+			{END DIRECCION_fieldcolumn}
+			{BEGIN TELEFONO_fieldcolumn}
+			<td  class="{$TELEFONO_class}" {$TELEFONO_style} {$recordattrs}>
+				{$TELEFONO_value}
+			</td>
+			{END TELEFONO_fieldcolumn}
+			{BEGIN DIAGNOSTICO_fieldcolumn}
+			<td  class="{$DIAGNOSTICO_class}" {$DIAGNOSTICO_style} {$recordattrs}>
+				{$DIAGNOSTICO_value}
+			</td>
+			{END DIAGNOSTICO_fieldcolumn}
+			{BEGIN NOMBREDELPADRE_fieldcolumn}
+			<td  class="{$NOMBREDELPADRE_class}" {$NOMBREDELPADRE_style} {$recordattrs}>
+				{$NOMBREDELPADRE_value}
+			</td>
+			{END NOMBREDELPADRE_fieldcolumn}
+			{BEGIN NOMBREDELAMADRE_fieldcolumn}
+			<td  class="{$NOMBREDELAMADRE_class}" {$NOMBREDELAMADRE_style} {$recordattrs}>
+				{$NOMBREDELAMADRE_value}
+			</td>
+			{END NOMBREDELAMADRE_fieldcolumn}
+			{BEGIN NOMBREACUDIENTE_fieldcolumn}
+			<td  class="{$NOMBREACUDIENTE_class}" {$NOMBREACUDIENTE_style} {$recordattrs}>
+				{$NOMBREACUDIENTE_value}
+			</td>
+			{END NOMBREACUDIENTE_fieldcolumn}
+			{BEGIN HABILIDADES_fieldcolumn}
+			<td  class="{$HABILIDADES_class}" {$HABILIDADES_style} {$recordattrs}>
+				{$HABILIDADES_value}
+			</td>
+			{END HABILIDADES_fieldcolumn}
+			{BEGIN LIMITACIONES_fieldcolumn}
+			<td  class="{$LIMITACIONES_class}" {$LIMITACIONES_style} {$recordattrs}>
+				{$LIMITACIONES_value}
+			</td>
+			{END LIMITACIONES_fieldcolumn}
+			{BEGIN DOCENTEACARGO_fieldcolumn}
+			<td  class="{$DOCENTEACARGO_class}" {$DOCENTEACARGO_style} {$recordattrs}>
+				{$DOCENTEACARGO_value}
+			</td>
+			{END DOCENTEACARGO_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

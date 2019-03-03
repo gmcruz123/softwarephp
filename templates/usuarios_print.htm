@@ -1,0 +1,183 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel usuarios print}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN ID_USUARIOS_fieldheadercolumn}
+			<th class="{$ID_USUARIOS_class}" {$ID_USUARIOS_style}  data-field="ID_USUARIOS">
+				{$label usuarios ID_USUARIOS}
+			</th>
+			{END ID_USUARIOS_fieldheadercolumn}
+			{BEGIN USUARIO_fieldheadercolumn}
+			<th class="{$USUARIO_class}" {$USUARIO_style}  data-field="USUARIO">
+				{$label usuarios USUARIO}
+			</th>
+			{END USUARIO_fieldheadercolumn}
+			{BEGIN CORREO_fieldheadercolumn}
+			<th class="{$CORREO_class}" {$CORREO_style}  data-field="CORREO">
+				{$label usuarios CORREO}
+			</th>
+			{END CORREO_fieldheadercolumn}
+			{BEGIN PASS_fieldheadercolumn}
+			<th class="{$PASS_class}" {$PASS_style}  data-field="PASS">
+				{$label usuarios PASS}
+			</th>
+			{END PASS_fieldheadercolumn}
+			{BEGIN FECHAREGISTRO_fieldheadercolumn}
+			<th class="{$FECHAREGISTRO_class}" {$FECHAREGISTRO_style}  data-field="FECHAREGISTRO">
+				{$label usuarios FECHAREGISTRO}
+			</th>
+			{END FECHAREGISTRO_fieldheadercolumn}
+			{BEGIN ROL_fieldheadercolumn}
+			<th class="{$ROL_class}" {$ROL_style}  data-field="ROL">
+				{$label usuarios ROL}
+			</th>
+			{END ROL_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN ID_USUARIOS_fieldcolumn}
+			<td  class="{$ID_USUARIOS_class}" {$ID_USUARIOS_style} {$recordattrs}>
+				{$ID_USUARIOS_value}
+			</td>
+			{END ID_USUARIOS_fieldcolumn}
+			{BEGIN USUARIO_fieldcolumn}
+			<td  class="{$USUARIO_class}" {$USUARIO_style} {$recordattrs}>
+				{$USUARIO_value}
+			</td>
+			{END USUARIO_fieldcolumn}
+			{BEGIN CORREO_fieldcolumn}
+			<td  class="{$CORREO_class}" {$CORREO_style} {$recordattrs}>
+				{$CORREO_value}
+			</td>
+			{END CORREO_fieldcolumn}
+			{BEGIN PASS_fieldcolumn}
+			<td  class="{$PASS_class}" {$PASS_style} {$recordattrs}>
+				{$PASS_value}
+			</td>
+			{END PASS_fieldcolumn}
+			{BEGIN FECHAREGISTRO_fieldcolumn}
+			<td  class="{$FECHAREGISTRO_class}" {$FECHAREGISTRO_style} {$recordattrs}>
+				{$FECHAREGISTRO_value}
+			</td>
+			{END FECHAREGISTRO_fieldcolumn}
+			{BEGIN ROL_fieldcolumn}
+			<td  class="{$ROL_class}" {$ROL_style} {$recordattrs}>
+				{$ROL_value}
+			</td>
+			{END ROL_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

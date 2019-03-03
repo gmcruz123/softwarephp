@@ -1,0 +1,375 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-dashboard" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+<IMG src="images/logopii.png" border="0"> {BEGIN collapse_block}<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+		
+				
+				
+				
+				
+		
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message}<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}<li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+{BEGIN container_center}<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="    "> 
+
+
+<FONT size="3"></FONT><FONT size="3"></FONT><FONT size="3"></FONT><FONT 
+size="3"> </FONT> 
+<table cellpadding=0 cellspacing=0 class="bs-dashboard" >
+
+
+
+
+
+
+
+<TBODY>
+  <tr>
+
+
+<td class="bs-dbelement" colspan="1" rowspan="1">
+
+
+<TABLE width="100%" bordercolor="" style="width: 944px;" bgcolor="" 
+      border="0" cellspacing="1" cellpadding="1">
+        <TBODY>
+        <TR>
+          <TD style="width: 946px;">
+            <P align="justify"><STRONG><FONT size="5">El síndrome de             
+                        Down:</FONT></STRONG> 
+            <FONT size="3">El     
+                    síndrome de Down (s.D.) o             trisomía 21 es una 
+            condición             humana ocasionada por la presencia de          
+               47 cromosomas en             los núcleos de las células, en lugar 
+            de 46. Hay             tres             cromosomas 21 en lugar de 
+            los dos habituales. Esta alteración                         genética 
+            aparece como consecuencia de un error, la llamada “no                
+                     disyunción”, durante la división de los cromosomas en el    
+                     núcleo de             la célula. Consiste en que las 
+            células del             bebé poseen en su núcleo             el 
+            cromosoma de más o cromosoma             
+            extra.</FONT></P>
+            <P align="justify"><FONT size="3"><STRONG><FONT size="5">El          
+                           trastorno por déficit de atención con hiperactividad  
+                                   (TDAH):</FONT></STRONG> se caracteriza por 
+            lapsos de breve o escasa                         atención y/o 
+            actividad excesiva y una impulsividad             inadecuada para    
+                     la edad del niño que afecta su             funcionamiento o 
+            su desarrollo. Es un             trastorno cerebral             que 
+            está presente desde el nacimiento o se             desarrolla        
+                 poco después de este. Algunos niños presentan sobre todo        
+                             dificultades en la atención prolongada, la 
+            concentración y la                         capacidad para completar 
+            las tareas; otros son hiperactivos e                         
+            impulsivos; y algunos niños pertenecen a ambos             
+            grupos.</FONT></P>
+            <P align="justify"><FONT size="3"><BR></FONT></P>
+            <P align="justify"><STRONG><FONT size="5">Los trastornos del         
+                            espectro autista (TEA):</FONT></STRONG> <FONT size="3">La 
+                        persona             afectada es incapaz de establecer 
+            relaciones             sociales normales,             utilizan el 
+            lenguaje de forma anómala             o no lo utiliza en absoluto y  
+                       se comporta de manera             compulsiva y ritual. 
+            También presentan             patrones             restringidos de 
+            comportamiento, intereses y/o actividades                         y, 
+            a menudo, siguen rutinas rígidas. El diagnóstico se basa en la       
+                              observación y en la información aportada por los 
+            padres y             otros             cuidadores.</FONT></P>
+            <P align="justify"><FONT size="3"></FONT><STRONG><FONT size="5">Los  
+                                   trastornos del espectro 
+            autista:</FONT></STRONG> <FONT size="3">se             consideran un 
+            espectro (una gama) de             trastornos, porque las            
+             manifestaciones varían             ampliamente en tipo y en 
+            gravedad.             Anteriormente, los             trastornos del 
+            espectro autista (TEA) se             subdividían en:             
+            autismo clásico, síndrome de Asperger, síndrome de             Rett, 
+                        trastorno desintegrativo infantil y trastorno 
+            generalizado del                         desarrollo no especificado. 
+            Sin embargo, en la actualidad ya             no se             
+            utiliza esta subdivisión y se consideran todos             estos 
+            trastornos como             trastornos del espectro autista          
+               (TEA) (con la excepción del síndrome             de Rett, que es 
+            un             trastorno genético distinto).</FONT></P>
+            <P align="justify"><FONT size="3"></FONT><FONT size="5"><STRONG>La   
+                                  dislexia: </STRONG></FONT><FONT size="3">Es un 
+            tipo de             trastorno del             aprendizaje. No 
+            existen estimaciones sobre             el número de niños            
+             afectados por dislexia, pero             alrededor del 15% de los 
+            escolares             reciben adaptaciones             o instrucción 
+            especial para las dificultades de             lectura.             
+            Se identifica más en varones que en niñas; sin embargo, con          
+                           frecuencia simplemente puede no ser reconocido en las 
+            niñas. La                         dislexia tiende a aparecer en el 
+            seno de una misma             familia. La             dislexia 
+            ocurre cuando el cerebro tiene             dificultades para llevar 
+            a             cabo la conexión entre             sonidos y símbolos 
+            (letras).</FONT></P>
+            <P align="justify"><FONT size="3"></FONT><STRONG><FONT size="5">La   
+                                  discapacidad intelectual:</FONT></STRONG> 
+            <FONT size="3">(DI) no es             un trastorno médico 
+            específico, como             lo son la neumonía o la             
+            faringitis, y tampoco es un             trastorno de la salud 
+            mental. Las             personas afectadas             tienen un 
+            funcionamiento intelectual             significativamente            
+             bajo, lo que limita su capacidad para afrontar             una o 
+            más             actividades de la vida diaria (habilidades 
+            adaptativas) de                         tal manera que requieren 
+            ayuda permanente. Las habilidades                         
+            adaptativas se pueden clasificar en varias áreas:</FONT></P>
+            <P align="justify"><FONT size="3"></FONT><STRONG><FONT size="5">El   
+                                  síndrome de Asperger:</FONT></STRONG> <FONT 
+            size="3">Es un             trastorno             del desarrollo que 
+            se incluye dentro del             espectro autista y que             
+            afecta la interacción social             recíproca, la comunicación 
+            verbal y no             verbal, una             resistencia para 
+            aceptar el cambio, inflexibilidad del                         
+            pensamiento así como poseer campos de interés estrecho y absorbente. 
+                                    Las personas con este síndrome son, 
+            generalmente,             extremadamente             buenos en las 
+            habilidades de memoria             (hechos, figuras, fechas,         
+                épocas, etc.) muchos             sobresalen en matemáticas y 
+            ciencia. Hay un             rango en la             severidad de 
+            síntomas dentro del síndrome, el niño muy                         
+            levemente afectado resulta a menudo no diagnosticado y puede apenas  
+                                   parecer raro o excéntrico.</FONT></P>
+            <P align="justify"><FONT size="3"><FONT size="5"><STRONG>Síndrome de 
+                                    Rett:</STRONG></FONT> Enviar esta página a 
+            un amigo             Imprimir             Facebook Twitter El 
+            síndrome de Rett (RTT) es             un trastorno del             
+            sistema nervioso. Esta afección lleva a             problemas en el 
+            desarrollo             de los niños. Sobre todo             afecta 
+            las habilidades de lenguaje y el uso             de las             
+            manos. Causas: El RTT se presenta casi siempre en las niñas.         
+                            Se puede diagnosticar como autismo o parálisis 
+            cerebral. La             mayoría             de los casos de RTT se 
+            debe a un problema en un             gen llamado MECP2.             
+            El gen se encuentra en el cromosoma             X. Las mujeres 
+            tienen 2             cromosomas X. Aun cuando un             
+            cromosoma presente este defecto, el otro             cromosoma X es  
+                       lo suficientemente normal para que la niña                
+                     sobreviva.</FONT></P>
+            <P align="justify"><FONT size="3"><STRONG><FONT size="5">Trastorno   
+                                  generalizado del desarrollo, no especificado 
+            de otra                         manera:</FONT></STRONG> Es posible 
+            que se le diagnostique a un             niño             un 
+            trastorno general del desarrollo, no             especificado de 
+            otra manera             (PDD-NOS) cuando tiene             algunas 
+            señales y síntomas de Trastornos del             espectro            
+             autista (ASD) o síndrome de Asperger pero no cumple con el          
+                           estricto criterio utilizado para diagnosticar esas 
+            condicione. El                         trastorno desintegrativo 
+            infantil es una alteración que             se             
+            caracteriza por la regresión del niño en múltiples             áreas 
+            de su             desempeño, tras un período de al menos 2           
+              años de desarrollo                   
+        normal.<BR></FONT></P></td>
+
+</TR></TBODY></TABLE></TD>
+    <td class="bs-dbelement" colspan="1" rowspan="1">
+
+
+<FONT 
+  size="3"></FONT></td>
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td class="bs-dbelement" colspan="1" rowspan="1">
+
+
+<FONT size="3"></FONT></td>
+
+<td class="bs-dbelement" colspan="1" rowspan="1">
+
+
+</td>
+</tr>
+
+
+
+
+</TBODY></table>
+
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

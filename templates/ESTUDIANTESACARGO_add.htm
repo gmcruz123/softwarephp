@@ -1,0 +1,358 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_addpage}
+<div {$addpage_chiddenattr} data-pageid="{$pageid}" data-container="addpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel ESTUDIANTESACARGO add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_addpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="    "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" role="form">
+	<div class="container">
+					{BEGIN DOCENTEACARGO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DOCENTEACARGO}" data-fieldname="DOCENTEACARGO" data-signal-error-for="DOCENTEACARGO{$id}" >
+	<label class=" control-label" for="{$labelfor_DOCENTEACARGO}">
+		{BEGIN DOCENTEACARGO_label}{$label ESTUDIANTESACARGO DOCENTEACARGO}{END DOCENTEACARGO_label}
+	</label>
+	<div class="" >
+		{$DOCENTEACARGO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DOCENTEACARGO">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO DOCENTEACARGO}
+		</div>
+	</div>
+</div>
+{END DOCENTEACARGO_fieldblock}
+
+					{BEGIN NOMBRE_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_NOMBRE}" data-fieldname="NOMBRE" data-signal-error-for="NOMBRE{$id}" >
+	<label class=" control-label" for="{$labelfor_NOMBRE}">
+		{BEGIN NOMBRE_label}{$label ESTUDIANTESACARGO NOMBRE}{END NOMBRE_label}
+	</label>
+	<div class="" >
+		{$NOMBRE_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="NOMBRE">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO NOMBRE}
+		</div>
+	</div>
+</div>
+{END NOMBRE_fieldblock}
+
+					{BEGIN FECHANACIMIENTO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_FECHANACIMIENTO}" data-fieldname="FECHANACIMIENTO" data-signal-error-for="FECHANACIMIENTO{$id}" >
+	<label class=" control-label" for="{$labelfor_FECHANACIMIENTO}">
+		{BEGIN FECHANACIMIENTO_label}{$label ESTUDIANTESACARGO FECHANACIMIENTO}{END FECHANACIMIENTO_label}
+	</label>
+	<div class="" >
+		{$FECHANACIMIENTO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="FECHANACIMIENTO">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO FECHANACIMIENTO}
+		</div>
+	</div>
+</div>
+{END FECHANACIMIENTO_fieldblock}
+
+					{BEGIN DIRECCION_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DIRECCION}" data-fieldname="DIRECCION" data-signal-error-for="DIRECCION{$id}" >
+	<label class=" control-label" for="{$labelfor_DIRECCION}">
+		{BEGIN DIRECCION_label}{$label ESTUDIANTESACARGO DIRECCION}{END DIRECCION_label}
+	</label>
+	<div class="" >
+		{$DIRECCION_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DIRECCION">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO DIRECCION}
+		</div>
+	</div>
+</div>
+{END DIRECCION_fieldblock}
+
+					{BEGIN TELEFONO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_TELEFONO}" data-fieldname="TELEFONO" data-signal-error-for="TELEFONO{$id}" >
+	<label class=" control-label" for="{$labelfor_TELEFONO}">
+		{BEGIN TELEFONO_label}{$label ESTUDIANTESACARGO TELEFONO}{END TELEFONO_label}
+	</label>
+	<div class="" >
+		{$TELEFONO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="TELEFONO">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO TELEFONO}
+		</div>
+	</div>
+</div>
+{END TELEFONO_fieldblock}
+
+					{BEGIN NOMBREDELPADRE_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_NOMBREDELPADRE}" data-fieldname="NOMBREDELPADRE" data-signal-error-for="NOMBREDELPADRE{$id}" >
+	<label class=" control-label" for="{$labelfor_NOMBREDELPADRE}">
+		{BEGIN NOMBREDELPADRE_label}{$label ESTUDIANTESACARGO NOMBREDELPADRE}{END NOMBREDELPADRE_label}
+	</label>
+	<div class="" >
+		{$NOMBREDELPADRE_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="NOMBREDELPADRE">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO NOMBREDELPADRE}
+		</div>
+	</div>
+</div>
+{END NOMBREDELPADRE_fieldblock}
+
+					{BEGIN NOMBREDELAMADRE_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_NOMBREDELAMADRE}" data-fieldname="NOMBREDELAMADRE" data-signal-error-for="NOMBREDELAMADRE{$id}" >
+	<label class=" control-label" for="{$labelfor_NOMBREDELAMADRE}">
+		{BEGIN NOMBREDELAMADRE_label}{$label ESTUDIANTESACARGO NOMBREDELAMADRE}{END NOMBREDELAMADRE_label}
+	</label>
+	<div class="" >
+		{$NOMBREDELAMADRE_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="NOMBREDELAMADRE">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO NOMBREDELAMADRE}
+		</div>
+	</div>
+</div>
+{END NOMBREDELAMADRE_fieldblock}
+
+					{BEGIN NOMBREACUDIENTE_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_NOMBREACUDIENTE}" data-fieldname="NOMBREACUDIENTE" data-signal-error-for="NOMBREACUDIENTE{$id}" >
+	<label class=" control-label" for="{$labelfor_NOMBREACUDIENTE}">
+		{BEGIN NOMBREACUDIENTE_label}{$label ESTUDIANTESACARGO NOMBREACUDIENTE}{END NOMBREACUDIENTE_label}
+	</label>
+	<div class="" >
+		{$NOMBREACUDIENTE_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="NOMBREACUDIENTE">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO NOMBREACUDIENTE}
+		</div>
+	</div>
+</div>
+{END NOMBREACUDIENTE_fieldblock}
+
+					{BEGIN HABILIDADES_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_HABILIDADES}" data-fieldname="HABILIDADES" data-signal-error-for="HABILIDADES{$id}" >
+	<label class=" control-label" for="{$labelfor_HABILIDADES}">
+		{BEGIN HABILIDADES_label}{$label ESTUDIANTESACARGO HABILIDADES}{END HABILIDADES_label}
+	</label>
+	<div class="" >
+		{$HABILIDADES_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="HABILIDADES">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO HABILIDADES}
+		</div>
+	</div>
+</div>
+{END HABILIDADES_fieldblock}
+
+					{BEGIN DIAGNOSTICO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DIAGNOSTICO}" data-fieldname="DIAGNOSTICO" data-signal-error-for="DIAGNOSTICO{$id}" >
+	<label class=" control-label" for="{$labelfor_DIAGNOSTICO}">
+		{BEGIN DIAGNOSTICO_label}{$label ESTUDIANTESACARGO DIAGNOSTICO}{END DIAGNOSTICO_label}
+	</label>
+	<div class="" >
+		{$DIAGNOSTICO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DIAGNOSTICO">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO DIAGNOSTICO}
+		</div>
+	</div>
+</div>
+{END DIAGNOSTICO_fieldblock}
+
+					{BEGIN LIMITACIONES_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_LIMITACIONES}" data-fieldname="LIMITACIONES" data-signal-error-for="LIMITACIONES{$id}" >
+	<label class=" control-label" for="{$labelfor_LIMITACIONES}">
+		{BEGIN LIMITACIONES_label}{$label ESTUDIANTESACARGO LIMITACIONES}{END LIMITACIONES_label}
+	</label>
+	<div class="" >
+		{$LIMITACIONES_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="LIMITACIONES">
+		<div class="text-muted" >
+		{$tooltip ESTUDIANTESACARGO LIMITACIONES}
+		</div>
+	</div>
+</div>
+{END LIMITACIONES_fieldblock}
+
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-4 "> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reset</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Back to list</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

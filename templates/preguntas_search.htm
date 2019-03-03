@@ -1,0 +1,455 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel preguntas search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN ID_PREGUNTAS_fieldblock}		
+	<div class="container {$fielddispclass_ID_PREGUNTAS}" data-fieldname="ID_PREGUNTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ID_PREGUNTAS}">
+				{$label preguntas ID_PREGUNTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ID_PREGUNTAS}
+			</div>
+			<div class="col-md-4" >
+				{$ID_PREGUNTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ID_PREGUNTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ID_PREGUNTAS_fieldblock}
+	{BEGIN ASPECTOS1_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS1}" data-fieldname="ASPECTOS1">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS1}">
+				{$label preguntas ASPECTOS1}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS1}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS1_fieldblock}
+	{BEGIN DESCIPCION1_fieldblock}		
+	<div class="container {$fielddispclass_DESCIPCION1}" data-fieldname="DESCIPCION1">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCIPCION1}">
+				{$label preguntas DESCIPCION1}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCIPCION1}
+			</div>
+			<div class="col-md-4" >
+				{$DESCIPCION1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCIPCION1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCIPCION1_fieldblock}
+	{BEGIN ASPECTOS2_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS2}" data-fieldname="ASPECTOS2">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS2}">
+				{$label preguntas ASPECTOS2}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS2}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS2_fieldblock}
+	{BEGIN DESCRIPCION2_fieldblock}		
+	<div class="container {$fielddispclass_DESCRIPCION2}" data-fieldname="DESCRIPCION2">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCRIPCION2}">
+				{$label preguntas DESCRIPCION2}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCRIPCION2}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION2_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION2_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCRIPCION2_fieldblock}
+	{BEGIN ASPECTOS3_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS3}" data-fieldname="ASPECTOS3">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS3}">
+				{$label preguntas ASPECTOS3}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS3}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS3_fieldblock}
+	{BEGIN DESCIPCION3_fieldblock}		
+	<div class="container {$fielddispclass_DESCIPCION3}" data-fieldname="DESCIPCION3">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCIPCION3}">
+				{$label preguntas DESCIPCION3}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCIPCION3}
+			</div>
+			<div class="col-md-4" >
+				{$DESCIPCION3_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCIPCION3_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCIPCION3_fieldblock}
+	{BEGIN ASPECTOS4_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS4}" data-fieldname="ASPECTOS4">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS4}">
+				{$label preguntas ASPECTOS4}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS4}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS4_fieldblock}
+	{BEGIN DESCRIPCION4_fieldblock}		
+	<div class="container {$fielddispclass_DESCRIPCION4}" data-fieldname="DESCRIPCION4">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCRIPCION4}">
+				{$label preguntas DESCRIPCION4}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCRIPCION4}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION4_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION4_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCRIPCION4_fieldblock}
+	{BEGIN ASPECTOS5_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS5}" data-fieldname="ASPECTOS5">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS5}">
+				{$label preguntas ASPECTOS5}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS5}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS5_fieldblock}
+	{BEGIN DESCRIPCION5_fieldblock}		
+	<div class="container {$fielddispclass_DESCRIPCION5}" data-fieldname="DESCRIPCION5">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCRIPCION5}">
+				{$label preguntas DESCRIPCION5}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCRIPCION5}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION5_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION5_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCRIPCION5_fieldblock}
+	{BEGIN ASPECTOS6_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS6}" data-fieldname="ASPECTOS6">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS6}">
+				{$label preguntas ASPECTOS6}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS6}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS6_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS6_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS6_fieldblock}
+	{BEGIN DESCRIPCION6_fieldblock}		
+	<div class="container {$fielddispclass_DESCRIPCION6}" data-fieldname="DESCRIPCION6">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCRIPCION6}">
+				{$label preguntas DESCRIPCION6}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCRIPCION6}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION6_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION6_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCRIPCION6_fieldblock}
+	{BEGIN ASPECTOS7_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS7}" data-fieldname="ASPECTOS7">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS7}">
+				{$label preguntas ASPECTOS7}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS7}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS7_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS7_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS7_fieldblock}
+	{BEGIN DESCRIPCION7_fieldblock}		
+	<div class="container {$fielddispclass_DESCRIPCION7}" data-fieldname="DESCRIPCION7">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCRIPCION7}">
+				{$label preguntas DESCRIPCION7}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCRIPCION7}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION7_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION7_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCRIPCION7_fieldblock}
+	{BEGIN ASPECTOS8_fieldblock}		
+	<div class="container {$fielddispclass_ASPECTOS8}" data-fieldname="ASPECTOS8">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ASPECTOS8}">
+				{$label preguntas ASPECTOS8}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ASPECTOS8}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS8_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ASPECTOS8_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ASPECTOS8_fieldblock}
+	{BEGIN DESCRIPCION8_fieldblock}		
+	<div class="container {$fielddispclass_DESCRIPCION8}" data-fieldname="DESCRIPCION8">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DESCRIPCION8}">
+				{$label preguntas DESCRIPCION8}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DESCRIPCION8}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION8_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DESCRIPCION8_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DESCRIPCION8_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_addpage}
+<div {$addpage_chiddenattr} data-pageid="{$pageid}" data-container="addpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel usuarios add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_addpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="    "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" role="form">
+	<div class="container">
+					{BEGIN USUARIO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_USUARIO}" data-fieldname="USUARIO" data-signal-error-for="USUARIO{$id}" >
+	<label class=" control-label" for="{$labelfor_USUARIO}">
+		{BEGIN USUARIO_label}{$label usuarios USUARIO}{END USUARIO_label}
+	</label>
+	<div class="" >
+		{$USUARIO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="USUARIO">
+		<div class="text-muted" >
+		{$tooltip usuarios USUARIO}
+		</div>
+	</div>
+</div>
+{END USUARIO_fieldblock}
+
+					{BEGIN CORREO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_CORREO}" data-fieldname="CORREO" data-signal-error-for="CORREO{$id}" >
+	<label class=" control-label" for="{$labelfor_CORREO}">
+		{BEGIN CORREO_label}{$label usuarios CORREO}{END CORREO_label}
+	</label>
+	<div class="" >
+		{$CORREO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="CORREO">
+		<div class="text-muted" >
+		{$tooltip usuarios CORREO}
+		</div>
+	</div>
+</div>
+{END CORREO_fieldblock}
+
+					{BEGIN PASS_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_PASS}" data-fieldname="PASS" data-signal-error-for="PASS{$id}" >
+	<label class=" control-label" for="{$labelfor_PASS}">
+		{BEGIN PASS_label}{$label usuarios PASS}{END PASS_label}
+	</label>
+	<div class="" >
+		{$PASS_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="PASS">
+		<div class="text-muted" >
+		{$tooltip usuarios PASS}
+		</div>
+	</div>
+</div>
+{END PASS_fieldblock}
+
+					{BEGIN FECHAREGISTRO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_FECHAREGISTRO}" data-fieldname="FECHAREGISTRO" data-signal-error-for="FECHAREGISTRO{$id}" >
+	<label class=" control-label" for="{$labelfor_FECHAREGISTRO}">
+		{BEGIN FECHAREGISTRO_label}{$label usuarios FECHAREGISTRO}{END FECHAREGISTRO_label}
+	</label>
+	<div class="" >
+		{$FECHAREGISTRO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="FECHAREGISTRO">
+		<div class="text-muted" >
+		{$tooltip usuarios FECHAREGISTRO}
+		</div>
+	</div>
+</div>
+{END FECHAREGISTRO_fieldblock}
+
+					{BEGIN ROL_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ROL}" data-fieldname="ROL" data-signal-error-for="ROL{$id}" >
+	<label class=" control-label" for="{$labelfor_ROL}">
+		{BEGIN ROL_label}{$label usuarios ROL}{END ROL_label}
+	</label>
+	<div class="" >
+		{$ROL_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ROL">
+		<div class="text-muted" >
+		{$tooltip usuarios ROL}
+		</div>
+	</div>
+</div>
+{END ROL_fieldblock}
+
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-4 "> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reset</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Back to list</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

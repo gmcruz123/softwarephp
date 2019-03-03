@@ -1,0 +1,328 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel preguntas view}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+
+	<div class="container">
+					{BEGIN ASPECTOS1_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS1} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS1">
+		<label class="control-label" for="{$labelfor_ASPECTOS1}">
+			{$label preguntas ASPECTOS1}
+		</label>
+		<div class="" >
+			{$ASPECTOS1_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS1_fieldblock}
+					{BEGIN DESCIPCION1_fieldblock}
+	<div class="{$fielddispclass_DESCIPCION1} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCIPCION1">
+		<label class="control-label" for="{$labelfor_DESCIPCION1}">
+			{$label preguntas DESCIPCION1}
+		</label>
+		<div class="" >
+			{$DESCIPCION1_value}&nbsp;
+		</div>
+	</div>
+{END DESCIPCION1_fieldblock}
+					{BEGIN ASPECTOS2_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS2} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS2">
+		<label class="control-label" for="{$labelfor_ASPECTOS2}">
+			{$label preguntas ASPECTOS2}
+		</label>
+		<div class="" >
+			{$ASPECTOS2_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS2_fieldblock}
+					{BEGIN DESCRIPCION2_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION2} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION2">
+		<label class="control-label" for="{$labelfor_DESCRIPCION2}">
+			{$label preguntas DESCRIPCION2}
+		</label>
+		<div class="" >
+			{$DESCRIPCION2_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION2_fieldblock}
+					{BEGIN ASPECTOS3_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS3} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS3">
+		<label class="control-label" for="{$labelfor_ASPECTOS3}">
+			{$label preguntas ASPECTOS3}
+		</label>
+		<div class="" >
+			{$ASPECTOS3_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS3_fieldblock}
+					{BEGIN DESCIPCION3_fieldblock}
+	<div class="{$fielddispclass_DESCIPCION3} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCIPCION3">
+		<label class="control-label" for="{$labelfor_DESCIPCION3}">
+			{$label preguntas DESCIPCION3}
+		</label>
+		<div class="" >
+			{$DESCIPCION3_value}&nbsp;
+		</div>
+	</div>
+{END DESCIPCION3_fieldblock}
+					{BEGIN ASPECTOS4_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS4} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS4">
+		<label class="control-label" for="{$labelfor_ASPECTOS4}">
+			{$label preguntas ASPECTOS4}
+		</label>
+		<div class="" >
+			{$ASPECTOS4_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS4_fieldblock}
+					{BEGIN DESCRIPCION4_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION4} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION4">
+		<label class="control-label" for="{$labelfor_DESCRIPCION4}">
+			{$label preguntas DESCRIPCION4}
+		</label>
+		<div class="" >
+			{$DESCRIPCION4_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION4_fieldblock}
+					{BEGIN ASPECTOS5_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS5} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS5">
+		<label class="control-label" for="{$labelfor_ASPECTOS5}">
+			{$label preguntas ASPECTOS5}
+		</label>
+		<div class="" >
+			{$ASPECTOS5_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS5_fieldblock}
+					{BEGIN DESCRIPCION5_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION5} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION5">
+		<label class="control-label" for="{$labelfor_DESCRIPCION5}">
+			{$label preguntas DESCRIPCION5}
+		</label>
+		<div class="" >
+			{$DESCRIPCION5_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION5_fieldblock}
+					{BEGIN ASPECTOS6_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS6} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS6">
+		<label class="control-label" for="{$labelfor_ASPECTOS6}">
+			{$label preguntas ASPECTOS6}
+		</label>
+		<div class="" >
+			{$ASPECTOS6_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS6_fieldblock}
+					{BEGIN DESCRIPCION6_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION6} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION6">
+		<label class="control-label" for="{$labelfor_DESCRIPCION6}">
+			{$label preguntas DESCRIPCION6}
+		</label>
+		<div class="" >
+			{$DESCRIPCION6_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION6_fieldblock}
+					{BEGIN ASPECTOS7_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS7} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS7">
+		<label class="control-label" for="{$labelfor_ASPECTOS7}">
+			{$label preguntas ASPECTOS7}
+		</label>
+		<div class="" >
+			{$ASPECTOS7_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS7_fieldblock}
+					{BEGIN DESCRIPCION7_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION7} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION7">
+		<label class="control-label" for="{$labelfor_DESCRIPCION7}">
+			{$label preguntas DESCRIPCION7}
+		</label>
+		<div class="" >
+			{$DESCRIPCION7_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION7_fieldblock}
+					{BEGIN ASPECTOS8_fieldblock}
+	<div class="{$fielddispclass_ASPECTOS8} col-md-6 bs-viewcontrolgroup" data-fieldname="ASPECTOS8">
+		<label class="control-label" for="{$labelfor_ASPECTOS8}">
+			{$label preguntas ASPECTOS8}
+		</label>
+		<div class="" >
+			{$ASPECTOS8_value}&nbsp;
+		</div>
+	</div>
+{END ASPECTOS8_fieldblock}
+					{BEGIN DESCRIPCION8_fieldblock}
+	<div class="{$fielddispclass_DESCRIPCION8} col-md-6 bs-viewcontrolgroup" data-fieldname="DESCRIPCION8">
+		<label class="control-label" for="{$labelfor_DESCRIPCION8}">
+			{$label preguntas DESCRIPCION8}
+		</label>
+		<div class="" >
+			{$DESCRIPCION8_value}&nbsp;
+		</div>
+	</div>
+{END DESCRIPCION8_fieldblock}
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-6 "> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>Close window</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="   col-md-4 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

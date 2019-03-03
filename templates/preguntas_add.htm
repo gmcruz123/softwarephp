@@ -1,0 +1,438 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_addpage}
+<div {$addpage_chiddenattr} data-pageid="{$pageid}" data-container="addpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel preguntas add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_addpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="    "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" role="form">
+	<div class="container">
+					{BEGIN ASPECTOS1_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS1}" data-fieldname="ASPECTOS1" data-signal-error-for="ASPECTOS1{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS1}">
+		{BEGIN ASPECTOS1_label}{$label preguntas ASPECTOS1}{END ASPECTOS1_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS1_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS1">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS1}
+		</div>
+	</div>
+</div>
+{END ASPECTOS1_fieldblock}
+
+					{BEGIN DESCIPCION1_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCIPCION1}" data-fieldname="DESCIPCION1" data-signal-error-for="DESCIPCION1{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCIPCION1}">
+		{BEGIN DESCIPCION1_label}{$label preguntas DESCIPCION1}{END DESCIPCION1_label}
+	</label>
+	<div class="" >
+		{$DESCIPCION1_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCIPCION1">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCIPCION1}
+		</div>
+	</div>
+</div>
+{END DESCIPCION1_fieldblock}
+
+					{BEGIN ASPECTOS2_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS2}" data-fieldname="ASPECTOS2" data-signal-error-for="ASPECTOS2{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS2}">
+		{BEGIN ASPECTOS2_label}{$label preguntas ASPECTOS2}{END ASPECTOS2_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS2_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS2">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS2}
+		</div>
+	</div>
+</div>
+{END ASPECTOS2_fieldblock}
+
+					{BEGIN DESCRIPCION2_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCRIPCION2}" data-fieldname="DESCRIPCION2" data-signal-error-for="DESCRIPCION2{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCRIPCION2}">
+		{BEGIN DESCRIPCION2_label}{$label preguntas DESCRIPCION2}{END DESCRIPCION2_label}
+	</label>
+	<div class="" >
+		{$DESCRIPCION2_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCRIPCION2">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCRIPCION2}
+		</div>
+	</div>
+</div>
+{END DESCRIPCION2_fieldblock}
+
+					{BEGIN ASPECTOS3_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS3}" data-fieldname="ASPECTOS3" data-signal-error-for="ASPECTOS3{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS3}">
+		{BEGIN ASPECTOS3_label}{$label preguntas ASPECTOS3}{END ASPECTOS3_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS3_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS3">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS3}
+		</div>
+	</div>
+</div>
+{END ASPECTOS3_fieldblock}
+
+					{BEGIN DESCIPCION3_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCIPCION3}" data-fieldname="DESCIPCION3" data-signal-error-for="DESCIPCION3{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCIPCION3}">
+		{BEGIN DESCIPCION3_label}{$label preguntas DESCIPCION3}{END DESCIPCION3_label}
+	</label>
+	<div class="" >
+		{$DESCIPCION3_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCIPCION3">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCIPCION3}
+		</div>
+	</div>
+</div>
+{END DESCIPCION3_fieldblock}
+
+					{BEGIN ASPECTOS4_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS4}" data-fieldname="ASPECTOS4" data-signal-error-for="ASPECTOS4{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS4}">
+		{BEGIN ASPECTOS4_label}{$label preguntas ASPECTOS4}{END ASPECTOS4_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS4_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS4">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS4}
+		</div>
+	</div>
+</div>
+{END ASPECTOS4_fieldblock}
+
+					{BEGIN DESCRIPCION4_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCRIPCION4}" data-fieldname="DESCRIPCION4" data-signal-error-for="DESCRIPCION4{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCRIPCION4}">
+		{BEGIN DESCRIPCION4_label}{$label preguntas DESCRIPCION4}{END DESCRIPCION4_label}
+	</label>
+	<div class="" >
+		{$DESCRIPCION4_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCRIPCION4">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCRIPCION4}
+		</div>
+	</div>
+</div>
+{END DESCRIPCION4_fieldblock}
+
+					{BEGIN ASPECTOS5_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS5}" data-fieldname="ASPECTOS5" data-signal-error-for="ASPECTOS5{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS5}">
+		{BEGIN ASPECTOS5_label}{$label preguntas ASPECTOS5}{END ASPECTOS5_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS5_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS5">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS5}
+		</div>
+	</div>
+</div>
+{END ASPECTOS5_fieldblock}
+
+					{BEGIN DESCRIPCION5_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCRIPCION5}" data-fieldname="DESCRIPCION5" data-signal-error-for="DESCRIPCION5{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCRIPCION5}">
+		{BEGIN DESCRIPCION5_label}{$label preguntas DESCRIPCION5}{END DESCRIPCION5_label}
+	</label>
+	<div class="" >
+		{$DESCRIPCION5_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCRIPCION5">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCRIPCION5}
+		</div>
+	</div>
+</div>
+{END DESCRIPCION5_fieldblock}
+
+					{BEGIN ASPECTOS6_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS6}" data-fieldname="ASPECTOS6" data-signal-error-for="ASPECTOS6{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS6}">
+		{BEGIN ASPECTOS6_label}{$label preguntas ASPECTOS6}{END ASPECTOS6_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS6_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS6">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS6}
+		</div>
+	</div>
+</div>
+{END ASPECTOS6_fieldblock}
+
+					{BEGIN DESCRIPCION6_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCRIPCION6}" data-fieldname="DESCRIPCION6" data-signal-error-for="DESCRIPCION6{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCRIPCION6}">
+		{BEGIN DESCRIPCION6_label}{$label preguntas DESCRIPCION6}{END DESCRIPCION6_label}
+	</label>
+	<div class="" >
+		{$DESCRIPCION6_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCRIPCION6">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCRIPCION6}
+		</div>
+	</div>
+</div>
+{END DESCRIPCION6_fieldblock}
+
+					{BEGIN ASPECTOS7_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS7}" data-fieldname="ASPECTOS7" data-signal-error-for="ASPECTOS7{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS7}">
+		{BEGIN ASPECTOS7_label}{$label preguntas ASPECTOS7}{END ASPECTOS7_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS7_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS7">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS7}
+		</div>
+	</div>
+</div>
+{END ASPECTOS7_fieldblock}
+
+					{BEGIN DESCRIPCION7_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCRIPCION7}" data-fieldname="DESCRIPCION7" data-signal-error-for="DESCRIPCION7{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCRIPCION7}">
+		{BEGIN DESCRIPCION7_label}{$label preguntas DESCRIPCION7}{END DESCRIPCION7_label}
+	</label>
+	<div class="" >
+		{$DESCRIPCION7_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCRIPCION7">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCRIPCION7}
+		</div>
+	</div>
+</div>
+{END DESCRIPCION7_fieldblock}
+
+					{BEGIN ASPECTOS8_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASPECTOS8}" data-fieldname="ASPECTOS8" data-signal-error-for="ASPECTOS8{$id}" >
+	<label class=" control-label" for="{$labelfor_ASPECTOS8}">
+		{BEGIN ASPECTOS8_label}{$label preguntas ASPECTOS8}{END ASPECTOS8_label}
+	</label>
+	<div class="" >
+		{$ASPECTOS8_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASPECTOS8">
+		<div class="text-muted" >
+		{$tooltip preguntas ASPECTOS8}
+		</div>
+	</div>
+</div>
+{END ASPECTOS8_fieldblock}
+
+					{BEGIN DESCRIPCION8_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_DESCRIPCION8}" data-fieldname="DESCRIPCION8" data-signal-error-for="DESCRIPCION8{$id}" >
+	<label class=" control-label" for="{$labelfor_DESCRIPCION8}">
+		{BEGIN DESCRIPCION8_label}{$label preguntas DESCRIPCION8}{END DESCRIPCION8_label}
+	</label>
+	<div class="" >
+		{$DESCRIPCION8_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="DESCRIPCION8">
+		<div class="text-muted" >
+		{$tooltip preguntas DESCRIPCION8}
+		</div>
+	</div>
+</div>
+{END DESCRIPCION8_fieldblock}
+
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-4 "> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reset</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Back to list</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

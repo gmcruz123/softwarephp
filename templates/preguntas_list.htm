@@ -1,0 +1,848 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >Edit selected</a></li>
+		{END editselected_link}
+
+				
+				
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="preguntas_search.php" {$advsearchlink_attrs}>Advanced search</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				
+				
+		
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Show all">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+	
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+				{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>Save all</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>Cancel</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+{BEGIN container_tabs}
+<div {$tabs_chiddenattr} data-pageid="{$pageid}" data-container="tabs" class="    "> 
+
+{BEGIN grid_tabs}
+<div {$bsgrid_tabs_hiddenattr} data-pageid="{$pageid}" data-brick="bsgrid_tabs">
+<ul class="nav nav-tabs">
+{$grid_tabs_content}
+</ul>
+</div>
+{END grid_tabs}
+
+
+
+</div>
+{END container_tabs}
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=ID_PREGUNTAS]:before {
+		content: "{$label preguntas ID_PREGUNTAS}";
+	}
+	.bs-gridcell[data-field=ASPECTOS1]:before {
+		content: "{$label preguntas ASPECTOS1}";
+	}
+	.bs-gridcell[data-field=DESCIPCION1]:before {
+		content: "{$label preguntas DESCIPCION1}";
+	}
+	.bs-gridcell[data-field=ASPECTOS2]:before {
+		content: "{$label preguntas ASPECTOS2}";
+	}
+	.bs-gridcell[data-field=DESCRIPCION2]:before {
+		content: "{$label preguntas DESCRIPCION2}";
+	}
+	.bs-gridcell[data-field=ASPECTOS3]:before {
+		content: "{$label preguntas ASPECTOS3}";
+	}
+	.bs-gridcell[data-field=DESCIPCION3]:before {
+		content: "{$label preguntas DESCIPCION3}";
+	}
+	.bs-gridcell[data-field=ASPECTOS4]:before {
+		content: "{$label preguntas ASPECTOS4}";
+	}
+	.bs-gridcell[data-field=DESCRIPCION4]:before {
+		content: "{$label preguntas DESCRIPCION4}";
+	}
+	.bs-gridcell[data-field=ASPECTOS5]:before {
+		content: "{$label preguntas ASPECTOS5}";
+	}
+	.bs-gridcell[data-field=DESCRIPCION5]:before {
+		content: "{$label preguntas DESCRIPCION5}";
+	}
+	.bs-gridcell[data-field=ASPECTOS6]:before {
+		content: "{$label preguntas ASPECTOS6}";
+	}
+	.bs-gridcell[data-field=DESCRIPCION6]:before {
+		content: "{$label preguntas DESCRIPCION6}";
+	}
+	.bs-gridcell[data-field=ASPECTOS7]:before {
+		content: "{$label preguntas ASPECTOS7}";
+	}
+	.bs-gridcell[data-field=DESCRIPCION7]:before {
+		content: "{$label preguntas DESCRIPCION7}";
+	}
+	.bs-gridcell[data-field=ASPECTOS8]:before {
+		content: "{$label preguntas ASPECTOS8}";
+	}
+	.bs-gridcell[data-field=DESCRIPCION8]:before {
+		content: "{$label preguntas DESCRIPCION8}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN ASPECTOS1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS1_class}" data-field=ASPECTOS1>
+									{BEGIN ASPECTOS1_fieldheader}
+																				<span {$ASPECTOS1_orderlinkattrs}>
+											{$label preguntas ASPECTOS1}
+										</span>
+									{END ASPECTOS1_fieldheader}
+									</th>
+									{END ASPECTOS1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCIPCION1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCIPCION1_class}" data-field=DESCIPCION1>
+									{BEGIN DESCIPCION1_fieldheader}
+																				<span {$DESCIPCION1_orderlinkattrs}>
+											{$label preguntas DESCIPCION1}
+										</span>
+									{END DESCIPCION1_fieldheader}
+									</th>
+									{END DESCIPCION1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS2_class}" data-field=ASPECTOS2>
+									{BEGIN ASPECTOS2_fieldheader}
+																				<span {$ASPECTOS2_orderlinkattrs}>
+											{$label preguntas ASPECTOS2}
+										</span>
+									{END ASPECTOS2_fieldheader}
+									</th>
+									{END ASPECTOS2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCRIPCION2_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCRIPCION2_class}" data-field=DESCRIPCION2>
+									{BEGIN DESCRIPCION2_fieldheader}
+																				<span {$DESCRIPCION2_orderlinkattrs}>
+											{$label preguntas DESCRIPCION2}
+										</span>
+									{END DESCRIPCION2_fieldheader}
+									</th>
+									{END DESCRIPCION2_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS3_class}" data-field=ASPECTOS3>
+									{BEGIN ASPECTOS3_fieldheader}
+																				<span {$ASPECTOS3_orderlinkattrs}>
+											{$label preguntas ASPECTOS3}
+										</span>
+									{END ASPECTOS3_fieldheader}
+									</th>
+									{END ASPECTOS3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCIPCION3_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCIPCION3_class}" data-field=DESCIPCION3>
+									{BEGIN DESCIPCION3_fieldheader}
+																				<span {$DESCIPCION3_orderlinkattrs}>
+											{$label preguntas DESCIPCION3}
+										</span>
+									{END DESCIPCION3_fieldheader}
+									</th>
+									{END DESCIPCION3_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS4_class}" data-field=ASPECTOS4>
+									{BEGIN ASPECTOS4_fieldheader}
+																				<span {$ASPECTOS4_orderlinkattrs}>
+											{$label preguntas ASPECTOS4}
+										</span>
+									{END ASPECTOS4_fieldheader}
+									</th>
+									{END ASPECTOS4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCRIPCION4_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCRIPCION4_class}" data-field=DESCRIPCION4>
+									{BEGIN DESCRIPCION4_fieldheader}
+																				<span {$DESCRIPCION4_orderlinkattrs}>
+											{$label preguntas DESCRIPCION4}
+										</span>
+									{END DESCRIPCION4_fieldheader}
+									</th>
+									{END DESCRIPCION4_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS5_class}" data-field=ASPECTOS5>
+									{BEGIN ASPECTOS5_fieldheader}
+																				<span {$ASPECTOS5_orderlinkattrs}>
+											{$label preguntas ASPECTOS5}
+										</span>
+									{END ASPECTOS5_fieldheader}
+									</th>
+									{END ASPECTOS5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCRIPCION5_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCRIPCION5_class}" data-field=DESCRIPCION5>
+									{BEGIN DESCRIPCION5_fieldheader}
+																				<span {$DESCRIPCION5_orderlinkattrs}>
+											{$label preguntas DESCRIPCION5}
+										</span>
+									{END DESCRIPCION5_fieldheader}
+									</th>
+									{END DESCRIPCION5_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS6_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS6_class}" data-field=ASPECTOS6>
+									{BEGIN ASPECTOS6_fieldheader}
+																				<span {$ASPECTOS6_orderlinkattrs}>
+											{$label preguntas ASPECTOS6}
+										</span>
+									{END ASPECTOS6_fieldheader}
+									</th>
+									{END ASPECTOS6_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCRIPCION6_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCRIPCION6_class}" data-field=DESCRIPCION6>
+									{BEGIN DESCRIPCION6_fieldheader}
+																				<span {$DESCRIPCION6_orderlinkattrs}>
+											{$label preguntas DESCRIPCION6}
+										</span>
+									{END DESCRIPCION6_fieldheader}
+									</th>
+									{END DESCRIPCION6_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS7_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS7_class}" data-field=ASPECTOS7>
+									{BEGIN ASPECTOS7_fieldheader}
+																				<span {$ASPECTOS7_orderlinkattrs}>
+											{$label preguntas ASPECTOS7}
+										</span>
+									{END ASPECTOS7_fieldheader}
+									</th>
+									{END ASPECTOS7_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCRIPCION7_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCRIPCION7_class}" data-field=DESCRIPCION7>
+									{BEGIN DESCRIPCION7_fieldheader}
+																				<span {$DESCRIPCION7_orderlinkattrs}>
+											{$label preguntas DESCRIPCION7}
+										</span>
+									{END DESCRIPCION7_fieldheader}
+									</th>
+									{END DESCRIPCION7_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ASPECTOS8_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ASPECTOS8_class}" data-field=ASPECTOS8>
+									{BEGIN ASPECTOS8_fieldheader}
+																				<span {$ASPECTOS8_orderlinkattrs}>
+											{$label preguntas ASPECTOS8}
+										</span>
+									{END ASPECTOS8_fieldheader}
+									</th>
+									{END ASPECTOS8_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN DESCRIPCION8_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$DESCRIPCION8_class}" data-field=DESCRIPCION8>
+									{BEGIN DESCRIPCION8_fieldheader}
+																				<span {$DESCRIPCION8_orderlinkattrs}>
+											{$label preguntas DESCRIPCION8}
+										</span>
+									{END DESCRIPCION8_fieldheader}
+									</th>
+									{END DESCRIPCION8_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+	
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="Inline Edit"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+	
+	<span data-hidden {$ieditbuttonsholder_attrs}></span>
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="View"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN ASPECTOS1_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS1_class}"  data-field=ASPECTOS1 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS1_value}
+	</td>
+{END ASPECTOS1_fieldcolumn}
+
+
+	{BEGIN DESCIPCION1_fieldcolumn}
+	<td class="bs-gridcell {$DESCIPCION1_class}"  data-field=DESCIPCION1 {$rowstyle} {$recordattrs}>
+		{$DESCIPCION1_value}
+	</td>
+{END DESCIPCION1_fieldcolumn}
+
+
+	{BEGIN ASPECTOS2_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS2_class}"  data-field=ASPECTOS2 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS2_value}
+	</td>
+{END ASPECTOS2_fieldcolumn}
+
+
+	{BEGIN DESCRIPCION2_fieldcolumn}
+	<td class="bs-gridcell {$DESCRIPCION2_class}"  data-field=DESCRIPCION2 {$rowstyle} {$recordattrs}>
+		{$DESCRIPCION2_value}
+	</td>
+{END DESCRIPCION2_fieldcolumn}
+
+
+	{BEGIN ASPECTOS3_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS3_class}"  data-field=ASPECTOS3 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS3_value}
+	</td>
+{END ASPECTOS3_fieldcolumn}
+
+
+	{BEGIN DESCIPCION3_fieldcolumn}
+	<td class="bs-gridcell {$DESCIPCION3_class}"  data-field=DESCIPCION3 {$rowstyle} {$recordattrs}>
+		{$DESCIPCION3_value}
+	</td>
+{END DESCIPCION3_fieldcolumn}
+
+
+	{BEGIN ASPECTOS4_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS4_class}"  data-field=ASPECTOS4 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS4_value}
+	</td>
+{END ASPECTOS4_fieldcolumn}
+
+
+	{BEGIN DESCRIPCION4_fieldcolumn}
+	<td class="bs-gridcell {$DESCRIPCION4_class}"  data-field=DESCRIPCION4 {$rowstyle} {$recordattrs}>
+		{$DESCRIPCION4_value}
+	</td>
+{END DESCRIPCION4_fieldcolumn}
+
+
+	{BEGIN ASPECTOS5_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS5_class}"  data-field=ASPECTOS5 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS5_value}
+	</td>
+{END ASPECTOS5_fieldcolumn}
+
+
+	{BEGIN DESCRIPCION5_fieldcolumn}
+	<td class="bs-gridcell {$DESCRIPCION5_class}"  data-field=DESCRIPCION5 {$rowstyle} {$recordattrs}>
+		{$DESCRIPCION5_value}
+	</td>
+{END DESCRIPCION5_fieldcolumn}
+
+
+	{BEGIN ASPECTOS6_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS6_class}"  data-field=ASPECTOS6 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS6_value}
+	</td>
+{END ASPECTOS6_fieldcolumn}
+
+
+	{BEGIN DESCRIPCION6_fieldcolumn}
+	<td class="bs-gridcell {$DESCRIPCION6_class}"  data-field=DESCRIPCION6 {$rowstyle} {$recordattrs}>
+		{$DESCRIPCION6_value}
+	</td>
+{END DESCRIPCION6_fieldcolumn}
+
+
+	{BEGIN ASPECTOS7_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS7_class}"  data-field=ASPECTOS7 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS7_value}
+	</td>
+{END ASPECTOS7_fieldcolumn}
+
+
+	{BEGIN DESCRIPCION7_fieldcolumn}
+	<td class="bs-gridcell {$DESCRIPCION7_class}"  data-field=DESCRIPCION7 {$rowstyle} {$recordattrs}>
+		{$DESCRIPCION7_value}
+	</td>
+{END DESCRIPCION7_fieldcolumn}
+
+
+	{BEGIN ASPECTOS8_fieldcolumn}
+	<td class="bs-gridcell {$ASPECTOS8_class}"  data-field=ASPECTOS8 {$rowstyle} {$recordattrs}>
+		{$ASPECTOS8_value}
+	</td>
+{END ASPECTOS8_fieldcolumn}
+
+
+	{BEGIN DESCRIPCION8_fieldcolumn}
+	<td class="bs-gridcell {$DESCRIPCION8_class}"  data-field=DESCRIPCION8 {$rowstyle} {$recordattrs}>
+		{$DESCRIPCION8_value}
+	</td>
+{END DESCRIPCION8_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

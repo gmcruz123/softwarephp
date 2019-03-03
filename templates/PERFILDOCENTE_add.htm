@@ -1,0 +1,326 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_addpage}
+<div {$addpage_chiddenattr} data-pageid="{$pageid}" data-container="addpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-12 "> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PERFILDOCENTE add}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>View</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_addpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="    "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" role="form">
+	<div class="container">
+					{BEGIN NOMBRES_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_NOMBRES}" data-fieldname="NOMBRES" data-signal-error-for="NOMBRES{$id}" >
+	<label class=" control-label" for="{$labelfor_NOMBRES}">
+		{BEGIN NOMBRES_label}{$label PERFILDOCENTE NOMBRES}{END NOMBRES_label}
+	</label>
+	<div class="" >
+		{$NOMBRES_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="NOMBRES">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE NOMBRES}
+		</div>
+	</div>
+</div>
+{END NOMBRES_fieldblock}
+
+					{BEGIN CELULAR_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_CELULAR}" data-fieldname="CELULAR" data-signal-error-for="CELULAR{$id}" >
+	<label class=" control-label" for="{$labelfor_CELULAR}">
+		{BEGIN CELULAR_label}{$label PERFILDOCENTE CELULAR}{END CELULAR_label}
+	</label>
+	<div class="" >
+		{$CELULAR_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="CELULAR">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE CELULAR}
+		</div>
+	</div>
+</div>
+{END CELULAR_fieldblock}
+
+					{BEGIN CORREO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_CORREO}" data-fieldname="CORREO" data-signal-error-for="CORREO{$id}" >
+	<label class=" control-label" for="{$labelfor_CORREO}">
+		{BEGIN CORREO_label}{$label PERFILDOCENTE CORREO}{END CORREO_label}
+	</label>
+	<div class="" >
+		{$CORREO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="CORREO">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE CORREO}
+		</div>
+	</div>
+</div>
+{END CORREO_fieldblock}
+
+					{BEGIN ASIGNATURA_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ASIGNATURA}" data-fieldname="ASIGNATURA" data-signal-error-for="ASIGNATURA{$id}" >
+	<label class=" control-label" for="{$labelfor_ASIGNATURA}">
+		{BEGIN ASIGNATURA_label}{$label PERFILDOCENTE ASIGNATURA}{END ASIGNATURA_label}
+	</label>
+	<div class="" >
+		{$ASIGNATURA_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ASIGNATURA">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE ASIGNATURA}
+		</div>
+	</div>
+</div>
+{END ASIGNATURA_fieldblock}
+
+					{BEGIN PROFESION_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_PROFESION}" data-fieldname="PROFESION" data-signal-error-for="PROFESION{$id}" >
+	<label class=" control-label" for="{$labelfor_PROFESION}">
+		{BEGIN PROFESION_label}{$label PERFILDOCENTE PROFESION}{END PROFESION_label}
+	</label>
+	<div class="" >
+		{$PROFESION_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="PROFESION">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE PROFESION}
+		</div>
+	</div>
+</div>
+{END PROFESION_fieldblock}
+
+					{BEGIN FECHACUMPLEA_OS_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_FECHACUMPLEA_OS}" data-fieldname="FECHACUMPLEA_OS" data-signal-error-for="FECHACUMPLEA_OS{$id}" >
+	<label class=" control-label" for="{$labelfor_FECHACUMPLEA_OS}">
+		{BEGIN FECHACUMPLEA_OS_label}{$label PERFILDOCENTE FECHACUMPLEA_OS}{END FECHACUMPLEA_OS_label}
+	</label>
+	<div class="" >
+		{$FECHACUMPLEA_OS_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="FECHACUMPLEA_OS">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE FECHACUMPLEA_OS}
+		</div>
+	</div>
+</div>
+{END FECHACUMPLEA_OS_fieldblock}
+
+					{BEGIN ESTADO_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_ESTADO}" data-fieldname="ESTADO" data-signal-error-for="ESTADO{$id}" >
+	<label class=" control-label" for="{$labelfor_ESTADO}">
+		{BEGIN ESTADO_label}{$label PERFILDOCENTE ESTADO}{END ESTADO_label}
+	</label>
+	<div class="" >
+		{$ESTADO_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="ESTADO">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE ESTADO}
+		</div>
+	</div>
+</div>
+{END ESTADO_fieldblock}
+
+					{BEGIN CEDULA_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_CEDULA}" data-fieldname="CEDULA" data-signal-error-for="CEDULA{$id}" >
+	<label class=" control-label" for="{$labelfor_CEDULA}">
+		{BEGIN CEDULA_label}{$label PERFILDOCENTE CEDULA}{END CEDULA_label}
+	</label>
+	<div class="" >
+		{$CEDULA_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="CEDULA">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE CEDULA}
+		</div>
+	</div>
+</div>
+{END CEDULA_fieldblock}
+
+					{BEGIN FOTOPERFIL_fieldblock}
+<div class="col-md-6 form-group {$fielddispclass_FOTOPERFIL}" data-fieldname="FOTOPERFIL" data-signal-error-for="FOTOPERFIL{$id}" >
+	<label class=" control-label" for="{$labelfor_FOTOPERFIL}">
+		{BEGIN FOTOPERFIL_label}{$label PERFILDOCENTE FOTOPERFIL}{END FOTOPERFIL_label}
+	</label>
+	<div class="" >
+		{$FOTOPERFIL_editcontrol}
+	</div>
+	<div class="help-block" data-helpfor="FOTOPERFIL">
+		<div class="text-muted" >
+		{$tooltip PERFILDOCENTE FOTOPERFIL}
+		</div>
+	</div>
+</div>
+{END FOTOPERFIL_fieldblock}
+
+	</div>
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-4 "> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Save</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reset</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Back to list</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

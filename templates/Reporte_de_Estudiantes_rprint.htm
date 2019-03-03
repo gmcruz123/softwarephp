@@ -1,0 +1,1462 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel Reporte_de_Estudiantes rprint}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+
+{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_3{background-color: #FFB6C1;}
+		td.nbgroup_3{background-color: #FFB6C1;}
+		td.header_3 {
+			background-color: #D89AA4; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_4{background-color: #FFFACD;}
+		td.nbgroup_4{background-color: #FFFACD;}
+		td.header_4 {
+			background-color: #D8D4AE; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:120%;
+/*		padding: 4px 8px;*/
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+						<table {$report_print_hiddenattr} data-pageid="{$pageid}" data-brick="report_print" class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+<tbody>
+				
+
+				{BEGIN grid_row}
+				<!-------------------------------------  group headers ----------------------------------------->
+					{BEGIN DIAGNOSTICO_firstnewgroup}
+									<tr class="group-headers">
+					<td class="blackshade">{$label Reporte_de_Estudiantes DIAGNOSTICO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes HABILIDADES}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes FECHANACIMIENTO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes LIMITACIONES}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes DOCENTEACARGO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes FOTODEPERFIL}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes FISICALOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes FISICAINDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes FISICAESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes FISICAHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMUNICATIVALOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMUNICATIVAINDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMUNICATIVAESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMUNICATIVAHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes DCLOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes DCINDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes CDESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes DCHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes PCLOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes PCINDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes PCESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes PCHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes ARTISTICALOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes ARTISTICAINDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes ARTISTICAESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes ARTISTICAHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes SALOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes SAINNDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes SAESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes SAHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMPLOGRO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMPINDICADOR}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMPESTRATEGIA}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes COMPHERRAMIENTAS}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes ID_ESTUDIANTE}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes NOMBRE}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes DIRECCION}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes TELEFONO}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes NOMBREDELPADRE}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes NOMBREDELAMADRE}</td>
+					<td class="blackshade">{$label Reporte_de_Estudiantes NOMBREACUDIENTE}</td>
+					</tr>
+					<tr class="group-spliter-1  group-spliter-2 group-spliter-3 group-spliter-4" {$rowattrs}>
+						
+												<td class=header_1 >
+							{$DIAGNOSTICO_grval}
+																				</td>
+						
+												<td class=header_2 >
+							{$HABILIDADES_grval}
+																				</td>
+						
+												<td class=header_3 >
+							{$FECHANACIMIENTO_grval}
+																				</td>
+						
+												<td class=header_4 >
+							{$LIMITACIONES_grval}
+																												</td>
+				<!-------------------------------------  data ----------------------------------------->
+					
+					<td class="data header_4">
+										{$DOCENTEACARGO_value}</td>
+					<td class="data header_4">
+										{$FOTODEPERFIL_value}</td>
+					<td class="data header_4">
+										{$FISICALOGRO_value}</td>
+					<td class="data header_4">
+										{$FISICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$FISICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$FISICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVALOGRO_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$DCLOGRO_value}</td>
+					<td class="data header_4">
+										{$DCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$CDESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$DCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$PCLOGRO_value}</td>
+					<td class="data header_4">
+										{$PCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$PCESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$PCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ARTISTICALOGRO_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$SALOGRO_value}</td>
+					<td class="data header_4">
+										{$SAINNDICADOR_value}</td>
+					<td class="data header_4">
+										{$SAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$SAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMPLOGRO_value}</td>
+					<td class="data header_4">
+										{$COMPINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMPESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMPHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ID_ESTUDIANTE_value}</td>
+					<td class="data header_4">
+										{$NOMBRE_value}</td>
+					<td class="data header_4">
+										{$DIRECCION_value}</td>
+					<td class="data header_4">
+										{$TELEFONO_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELPADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELAMADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREACUDIENTE_value}</td>
+					</tr>
+					{END DIAGNOSTICO_firstnewgroup}
+					{BEGIN HABILIDADES_firstnewgroup}
+									<tr class="group-spliter-2  group-spliter-3 group-spliter-4" {$rowattrs}>
+						
+												<td class=group_1>
+															&nbsp;
+						</td>
+						
+												<td class=header_2 >
+							{$HABILIDADES_grval}
+																				</td>
+						
+												<td class=header_3 >
+							{$FECHANACIMIENTO_grval}
+																				</td>
+						
+												<td class=header_4 >
+							{$LIMITACIONES_grval}
+																												</td>
+				<!-------------------------------------  data ----------------------------------------->
+					
+					<td class="data header_4">
+										{$DOCENTEACARGO_value}</td>
+					<td class="data header_4">
+										{$FOTODEPERFIL_value}</td>
+					<td class="data header_4">
+										{$FISICALOGRO_value}</td>
+					<td class="data header_4">
+										{$FISICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$FISICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$FISICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVALOGRO_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$DCLOGRO_value}</td>
+					<td class="data header_4">
+										{$DCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$CDESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$DCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$PCLOGRO_value}</td>
+					<td class="data header_4">
+										{$PCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$PCESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$PCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ARTISTICALOGRO_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$SALOGRO_value}</td>
+					<td class="data header_4">
+										{$SAINNDICADOR_value}</td>
+					<td class="data header_4">
+										{$SAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$SAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMPLOGRO_value}</td>
+					<td class="data header_4">
+										{$COMPINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMPESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMPHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ID_ESTUDIANTE_value}</td>
+					<td class="data header_4">
+										{$NOMBRE_value}</td>
+					<td class="data header_4">
+										{$DIRECCION_value}</td>
+					<td class="data header_4">
+										{$TELEFONO_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELPADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELAMADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREACUDIENTE_value}</td>
+					</tr>
+					{END HABILIDADES_firstnewgroup}
+					{BEGIN FECHANACIMIENTO_firstnewgroup}
+									<tr class="group-spliter-3  group-spliter-4" {$rowattrs}>
+						
+												<td class=group_1>
+															&nbsp;
+						</td>
+						
+												<td class=group_2>
+															&nbsp;
+						</td>
+						
+												<td class=header_3 >
+							{$FECHANACIMIENTO_grval}
+																				</td>
+						
+												<td class=header_4 >
+							{$LIMITACIONES_grval}
+																												</td>
+				<!-------------------------------------  data ----------------------------------------->
+					
+					<td class="data header_4">
+										{$DOCENTEACARGO_value}</td>
+					<td class="data header_4">
+										{$FOTODEPERFIL_value}</td>
+					<td class="data header_4">
+										{$FISICALOGRO_value}</td>
+					<td class="data header_4">
+										{$FISICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$FISICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$FISICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVALOGRO_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$DCLOGRO_value}</td>
+					<td class="data header_4">
+										{$DCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$CDESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$DCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$PCLOGRO_value}</td>
+					<td class="data header_4">
+										{$PCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$PCESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$PCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ARTISTICALOGRO_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$SALOGRO_value}</td>
+					<td class="data header_4">
+										{$SAINNDICADOR_value}</td>
+					<td class="data header_4">
+										{$SAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$SAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMPLOGRO_value}</td>
+					<td class="data header_4">
+										{$COMPINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMPESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMPHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ID_ESTUDIANTE_value}</td>
+					<td class="data header_4">
+										{$NOMBRE_value}</td>
+					<td class="data header_4">
+										{$DIRECCION_value}</td>
+					<td class="data header_4">
+										{$TELEFONO_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELPADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELAMADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREACUDIENTE_value}</td>
+					</tr>
+					{END FECHANACIMIENTO_firstnewgroup}
+					{BEGIN LIMITACIONES_firstnewgroup}
+									<tr class="group-spliter-4 " {$rowattrs}>
+						
+												<td class=group_1>
+															&nbsp;
+						</td>
+						
+												<td class=group_2>
+															&nbsp;
+						</td>
+						
+												<td class=group_3>
+															&nbsp;
+						</td>
+						
+												<td class=header_4 >
+							{$LIMITACIONES_grval}
+																												</td>
+				<!-------------------------------------  data ----------------------------------------->
+					
+					<td class="data header_4">
+										{$DOCENTEACARGO_value}</td>
+					<td class="data header_4">
+										{$FOTODEPERFIL_value}</td>
+					<td class="data header_4">
+										{$FISICALOGRO_value}</td>
+					<td class="data header_4">
+										{$FISICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$FISICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$FISICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVALOGRO_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMUNICATIVAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$DCLOGRO_value}</td>
+					<td class="data header_4">
+										{$DCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$CDESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$DCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$PCLOGRO_value}</td>
+					<td class="data header_4">
+										{$PCINDICADOR_value}</td>
+					<td class="data header_4">
+										{$PCESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$PCHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ARTISTICALOGRO_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAINDICADOR_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$ARTISTICAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$SALOGRO_value}</td>
+					<td class="data header_4">
+										{$SAINNDICADOR_value}</td>
+					<td class="data header_4">
+										{$SAESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$SAHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$COMPLOGRO_value}</td>
+					<td class="data header_4">
+										{$COMPINDICADOR_value}</td>
+					<td class="data header_4">
+										{$COMPESTRATEGIA_value}</td>
+					<td class="data header_4">
+										{$COMPHERRAMIENTAS_value}</td>
+					<td class="data header_4">
+										{$ID_ESTUDIANTE_value}</td>
+					<td class="data header_4">
+										{$NOMBRE_value}</td>
+					<td class="data header_4">
+										{$DIRECCION_value}</td>
+					<td class="data header_4">
+										{$TELEFONO_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELPADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREDELAMADRE_value}</td>
+					<td class="data header_4">
+										{$NOMBREACUDIENTE_value}</td>
+					</tr>
+					{END LIMITACIONES_firstnewgroup}
+								{BEGIN nonewgroup}
+					<tr >
+						<td class=group_1 >
+												&nbsp;
+						</td>
+						<td class=group_2 >
+												&nbsp;
+						</td>
+						<td class=group_3 >
+												&nbsp;
+						</td>
+						<td class=group_4 >
+												&nbsp;
+						</td>
+					
+					<td class=data>
+					{$DOCENTEACARGO_value}
+					</td>
+					<td class=data>
+					{$FOTODEPERFIL_value}
+					</td>
+					<td class=data>
+					{$FISICALOGRO_value}
+					</td>
+					<td class=data>
+					{$FISICAINDICADOR_value}
+					</td>
+					<td class=data>
+					{$FISICAESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$FISICAHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$COMUNICATIVALOGRO_value}
+					</td>
+					<td class=data>
+					{$COMUNICATIVAINDICADOR_value}
+					</td>
+					<td class=data>
+					{$COMUNICATIVAESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$COMUNICATIVAHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$DCLOGRO_value}
+					</td>
+					<td class=data>
+					{$DCINDICADOR_value}
+					</td>
+					<td class=data>
+					{$CDESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$DCHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$PCLOGRO_value}
+					</td>
+					<td class=data>
+					{$PCINDICADOR_value}
+					</td>
+					<td class=data>
+					{$PCESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$PCHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$ARTISTICALOGRO_value}
+					</td>
+					<td class=data>
+					{$ARTISTICAINDICADOR_value}
+					</td>
+					<td class=data>
+					{$ARTISTICAESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$ARTISTICAHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$SALOGRO_value}
+					</td>
+					<td class=data>
+					{$SAINNDICADOR_value}
+					</td>
+					<td class=data>
+					{$SAESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$SAHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$COMPLOGRO_value}
+					</td>
+					<td class=data>
+					{$COMPINDICADOR_value}
+					</td>
+					<td class=data>
+					{$COMPESTRATEGIA_value}
+					</td>
+					<td class=data>
+					{$COMPHERRAMIENTAS_value}
+					</td>
+					<td class=data>
+					{$ID_ESTUDIANTE_value}
+					</td>
+					<td class=data>
+					{$NOMBRE_value}
+					</td>
+					<td class=data>
+					{$DIRECCION_value}
+					</td>
+					<td class=data>
+					{$TELEFONO_value}
+					</td>
+					<td class=data>
+					{$NOMBREDELPADRE_value}
+					</td>
+					<td class=data>
+					{$NOMBREDELAMADRE_value}
+					</td>
+					<td class=data>
+					{$NOMBREACUDIENTE_value}
+					</td>
+					</tr>
+				{END nonewgroup}
+				<!-------------------------------------  group summary ----------------------------------------->
+								{BEGIN LIMITACIONES_endgroup}
+				<tr class="summaryrow" >
+					<td style="border-top: none;" class=group_1></td>
+					<td style="border-top: none;" class=group_2></td>
+					<td style="border-top: none;" class=group_3></td>
+										<td class=group_4 colspan=38 >
+					Summary for {$label Reporte_de_Estudiantes LIMITACIONES} {$LIMITACIONES_grval}
+					 - <span class="summary-4" data-type="summary" data-value="{$groupLIMITACIONES_total_cnt}">{$groupLIMITACIONES_total_cnt}</span> records total</td>
+				</tr>
+								<!--  Sum -->
+				<tr class="grouptotalsrow" >
+											<td class=group_4 >Sum</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="sum" data-value="{$groupLIMITACIONES_totalDIAGNOSTICO_sum}" data-field="DIAGNOSTICO">{$groupLIMITACIONES_totalDIAGNOSTICO_sum}</span></td>
+											<td class=group_4><span class="summary-4" data-type="sum" data-value="{$groupLIMITACIONES_totalHABILIDADES_sum}" data-field="HABILIDADES">{$groupLIMITACIONES_totalHABILIDADES_sum}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="sum" data-value="{$groupLIMITACIONES_totalLIMITACIONES_sum}" data-field="LIMITACIONES">{$groupLIMITACIONES_totalLIMITACIONES_sum}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+				</tr>	
+								<!--  Avg -->
+				<tr class="grouptotalsrow" >
+											<td class=group_4>Average</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="avg" data-value="{$groupLIMITACIONES_totalDIAGNOSTICO_avg}" data-field="DIAGNOSTICO">{$groupLIMITACIONES_totalDIAGNOSTICO_avg}</span></td>
+											<td class=group_4><span class="summary-4" data-type="avg" data-value="{$groupLIMITACIONES_totalHABILIDADES_avg}" data-field="HABILIDADES">{$groupLIMITACIONES_totalHABILIDADES_avg}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="avg" data-value="{$groupLIMITACIONES_totalLIMITACIONES_avg}" data-field="LIMITACIONES">{$groupLIMITACIONES_totalLIMITACIONES_avg}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+				</tr>	
+								<!--  Min -->
+				<tr class="grouptotalsrow" >
+											<td class=group_4>Min</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="min" data-value="{$groupLIMITACIONES_totalDIAGNOSTICO_min}" data-field="DIAGNOSTICO">{$groupLIMITACIONES_totalDIAGNOSTICO_min}</span></td>
+											<td class=group_4><span class="summary-4" data-type="min" data-value="{$groupLIMITACIONES_totalHABILIDADES_min}" data-field="HABILIDADES">{$groupLIMITACIONES_totalHABILIDADES_min}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="min" data-value="{$groupLIMITACIONES_totalLIMITACIONES_min}" data-field="LIMITACIONES">{$groupLIMITACIONES_totalLIMITACIONES_min}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+				</tr>	
+								<!--  Max -->
+				<tr class="grouptotalsrow" >
+											<td class=group_4>Max</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="max" data-value="{$groupLIMITACIONES_totalDIAGNOSTICO_max}" data-field="DIAGNOSTICO">{$groupLIMITACIONES_totalDIAGNOSTICO_max}</span></td>
+											<td class=group_4><span class="summary-4" data-type="max" data-value="{$groupLIMITACIONES_totalHABILIDADES_max}" data-field="HABILIDADES">{$groupLIMITACIONES_totalHABILIDADES_max}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4><span class="summary-4" data-type="max" data-value="{$groupLIMITACIONES_totalLIMITACIONES_max}" data-field="LIMITACIONES">{$groupLIMITACIONES_totalLIMITACIONES_max}</span></td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+											<td class=group_4>&nbsp;</td>
+				</tr>	
+				{END LIMITACIONES_endgroup}
+								{BEGIN FECHANACIMIENTO_endgroup}
+				<tr class="summaryrow" >
+					<td style="border-top: none;" class=group_1></td>
+					<td style="border-top: none;" class=group_2></td>
+										<td class=group_3 colspan=39 >
+					Summary for {$label Reporte_de_Estudiantes FECHANACIMIENTO} {$FECHANACIMIENTO_grval}
+					 - <span class="summary-3" data-type="summary" data-value="{$groupFECHANACIMIENTO_total_cnt}">{$groupFECHANACIMIENTO_total_cnt}</span> records total</td>
+				</tr>
+								<!--  Sum -->
+				<tr class="grouptotalsrow" >
+											<td class=group_3 >Sum</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="sum" data-value="{$groupFECHANACIMIENTO_totalDIAGNOSTICO_sum}" data-field="DIAGNOSTICO">{$groupFECHANACIMIENTO_totalDIAGNOSTICO_sum}</span></td>
+											<td class=group_3><span class="summary-3" data-type="sum" data-value="{$groupFECHANACIMIENTO_totalHABILIDADES_sum}" data-field="HABILIDADES">{$groupFECHANACIMIENTO_totalHABILIDADES_sum}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="sum" data-value="{$groupFECHANACIMIENTO_totalLIMITACIONES_sum}" data-field="LIMITACIONES">{$groupFECHANACIMIENTO_totalLIMITACIONES_sum}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+				</tr>	
+								<!--  Avg -->
+				<tr class="grouptotalsrow" >
+											<td class=group_3>Average</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="avg" data-value="{$groupFECHANACIMIENTO_totalDIAGNOSTICO_avg}" data-field="DIAGNOSTICO">{$groupFECHANACIMIENTO_totalDIAGNOSTICO_avg}</span></td>
+											<td class=group_3><span class="summary-3" data-type="avg" data-value="{$groupFECHANACIMIENTO_totalHABILIDADES_avg}" data-field="HABILIDADES">{$groupFECHANACIMIENTO_totalHABILIDADES_avg}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="avg" data-value="{$groupFECHANACIMIENTO_totalLIMITACIONES_avg}" data-field="LIMITACIONES">{$groupFECHANACIMIENTO_totalLIMITACIONES_avg}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+				</tr>	
+								<!--  Min -->
+				<tr class="grouptotalsrow" >
+											<td class=group_3>Min</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="min" data-value="{$groupFECHANACIMIENTO_totalDIAGNOSTICO_min}" data-field="DIAGNOSTICO">{$groupFECHANACIMIENTO_totalDIAGNOSTICO_min}</span></td>
+											<td class=group_3><span class="summary-3" data-type="min" data-value="{$groupFECHANACIMIENTO_totalHABILIDADES_min}" data-field="HABILIDADES">{$groupFECHANACIMIENTO_totalHABILIDADES_min}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="min" data-value="{$groupFECHANACIMIENTO_totalLIMITACIONES_min}" data-field="LIMITACIONES">{$groupFECHANACIMIENTO_totalLIMITACIONES_min}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+				</tr>	
+								<!--  Max -->
+				<tr class="grouptotalsrow" >
+											<td class=group_3>Max</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="max" data-value="{$groupFECHANACIMIENTO_totalDIAGNOSTICO_max}" data-field="DIAGNOSTICO">{$groupFECHANACIMIENTO_totalDIAGNOSTICO_max}</span></td>
+											<td class=group_3><span class="summary-3" data-type="max" data-value="{$groupFECHANACIMIENTO_totalHABILIDADES_max}" data-field="HABILIDADES">{$groupFECHANACIMIENTO_totalHABILIDADES_max}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3><span class="summary-3" data-type="max" data-value="{$groupFECHANACIMIENTO_totalLIMITACIONES_max}" data-field="LIMITACIONES">{$groupFECHANACIMIENTO_totalLIMITACIONES_max}</span></td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+											<td class=group_3>&nbsp;</td>
+				</tr>	
+				{END FECHANACIMIENTO_endgroup}
+								{BEGIN HABILIDADES_endgroup}
+				<tr class="summaryrow" >
+					<td style="border-top: none;" class=group_1></td>
+										<td class=group_2 colspan=40 >
+					Summary for {$label Reporte_de_Estudiantes HABILIDADES} {$HABILIDADES_grval}
+					 - <span class="summary-2" data-type="summary" data-value="{$groupHABILIDADES_total_cnt}">{$groupHABILIDADES_total_cnt}</span> records total</td>
+				</tr>
+								<!--  Sum -->
+				<tr class="grouptotalsrow" >
+											<td class=group_2 >Sum</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="sum" data-value="{$groupHABILIDADES_totalDIAGNOSTICO_sum}" data-field="DIAGNOSTICO">{$groupHABILIDADES_totalDIAGNOSTICO_sum}</span></td>
+											<td class=group_2><span class="summary-2" data-type="sum" data-value="{$groupHABILIDADES_totalHABILIDADES_sum}" data-field="HABILIDADES">{$groupHABILIDADES_totalHABILIDADES_sum}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="sum" data-value="{$groupHABILIDADES_totalLIMITACIONES_sum}" data-field="LIMITACIONES">{$groupHABILIDADES_totalLIMITACIONES_sum}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+				</tr>	
+								<!--  Avg -->
+				<tr class="grouptotalsrow" >
+											<td class=group_2>Average</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="avg" data-value="{$groupHABILIDADES_totalDIAGNOSTICO_avg}" data-field="DIAGNOSTICO">{$groupHABILIDADES_totalDIAGNOSTICO_avg}</span></td>
+											<td class=group_2><span class="summary-2" data-type="avg" data-value="{$groupHABILIDADES_totalHABILIDADES_avg}" data-field="HABILIDADES">{$groupHABILIDADES_totalHABILIDADES_avg}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="avg" data-value="{$groupHABILIDADES_totalLIMITACIONES_avg}" data-field="LIMITACIONES">{$groupHABILIDADES_totalLIMITACIONES_avg}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+				</tr>	
+								<!--  Min -->
+				<tr class="grouptotalsrow" >
+											<td class=group_2>Min</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="min" data-value="{$groupHABILIDADES_totalDIAGNOSTICO_min}" data-field="DIAGNOSTICO">{$groupHABILIDADES_totalDIAGNOSTICO_min}</span></td>
+											<td class=group_2><span class="summary-2" data-type="min" data-value="{$groupHABILIDADES_totalHABILIDADES_min}" data-field="HABILIDADES">{$groupHABILIDADES_totalHABILIDADES_min}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="min" data-value="{$groupHABILIDADES_totalLIMITACIONES_min}" data-field="LIMITACIONES">{$groupHABILIDADES_totalLIMITACIONES_min}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+				</tr>	
+								<!--  Max -->
+				<tr class="grouptotalsrow" >
+											<td class=group_2>Max</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="max" data-value="{$groupHABILIDADES_totalDIAGNOSTICO_max}" data-field="DIAGNOSTICO">{$groupHABILIDADES_totalDIAGNOSTICO_max}</span></td>
+											<td class=group_2><span class="summary-2" data-type="max" data-value="{$groupHABILIDADES_totalHABILIDADES_max}" data-field="HABILIDADES">{$groupHABILIDADES_totalHABILIDADES_max}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2><span class="summary-2" data-type="max" data-value="{$groupHABILIDADES_totalLIMITACIONES_max}" data-field="LIMITACIONES">{$groupHABILIDADES_totalLIMITACIONES_max}</span></td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+											<td class=group_2>&nbsp;</td>
+				</tr>	
+				{END HABILIDADES_endgroup}
+								{BEGIN DIAGNOSTICO_endgroup}
+				<tr class="summaryrow" >
+										<td class=group_1 colspan=41 >
+					Summary for {$label Reporte_de_Estudiantes DIAGNOSTICO} {$DIAGNOSTICO_grval}
+					 - <span class="summary-1" data-type="summary" data-value="{$groupDIAGNOSTICO_total_cnt}">{$groupDIAGNOSTICO_total_cnt}</span> records total</td>
+				</tr>
+								<!--  Sum -->
+				<tr class="grouptotalsrow" >
+											<td class=group_1 >Sum</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="sum" data-value="{$groupDIAGNOSTICO_totalDIAGNOSTICO_sum}" data-field="DIAGNOSTICO">{$groupDIAGNOSTICO_totalDIAGNOSTICO_sum}</span></td>
+											<td class=group_1><span class="summary-1" data-type="sum" data-value="{$groupDIAGNOSTICO_totalHABILIDADES_sum}" data-field="HABILIDADES">{$groupDIAGNOSTICO_totalHABILIDADES_sum}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="sum" data-value="{$groupDIAGNOSTICO_totalLIMITACIONES_sum}" data-field="LIMITACIONES">{$groupDIAGNOSTICO_totalLIMITACIONES_sum}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+				</tr>	
+								<!--  Avg -->
+				<tr class="grouptotalsrow" >
+											<td class=group_1>Average</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupDIAGNOSTICO_totalDIAGNOSTICO_avg}" data-field="DIAGNOSTICO">{$groupDIAGNOSTICO_totalDIAGNOSTICO_avg}</span></td>
+											<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupDIAGNOSTICO_totalHABILIDADES_avg}" data-field="HABILIDADES">{$groupDIAGNOSTICO_totalHABILIDADES_avg}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupDIAGNOSTICO_totalLIMITACIONES_avg}" data-field="LIMITACIONES">{$groupDIAGNOSTICO_totalLIMITACIONES_avg}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+				</tr>	
+								<!--  Min -->
+				<tr class="grouptotalsrow" >
+											<td class=group_1>Min</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="min" data-value="{$groupDIAGNOSTICO_totalDIAGNOSTICO_min}" data-field="DIAGNOSTICO">{$groupDIAGNOSTICO_totalDIAGNOSTICO_min}</span></td>
+											<td class=group_1><span class="summary-1" data-type="min" data-value="{$groupDIAGNOSTICO_totalHABILIDADES_min}" data-field="HABILIDADES">{$groupDIAGNOSTICO_totalHABILIDADES_min}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="min" data-value="{$groupDIAGNOSTICO_totalLIMITACIONES_min}" data-field="LIMITACIONES">{$groupDIAGNOSTICO_totalLIMITACIONES_min}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+				</tr>	
+								<!--  Max -->
+				<tr class="grouptotalsrow" >
+											<td class=group_1>Max</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="max" data-value="{$groupDIAGNOSTICO_totalDIAGNOSTICO_max}" data-field="DIAGNOSTICO">{$groupDIAGNOSTICO_totalDIAGNOSTICO_max}</span></td>
+											<td class=group_1><span class="summary-1" data-type="max" data-value="{$groupDIAGNOSTICO_totalHABILIDADES_max}" data-field="HABILIDADES">{$groupDIAGNOSTICO_totalHABILIDADES_max}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1><span class="summary-1" data-type="max" data-value="{$groupDIAGNOSTICO_totalLIMITACIONES_max}" data-field="LIMITACIONES">{$groupDIAGNOSTICO_totalLIMITACIONES_max}</span></td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+											<td class=group_1>&nbsp;</td>
+				</tr>	
+				{END DIAGNOSTICO_endgroup}
+				{END grid_row}
+
+
+												</tbody>
+</table>
+</div>
+{END grid_block}
+
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> 
+<META name="viewport" content="width=device-width, initial-scale=1.0"> 
+<TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001">      
+</HEAD> 
+<BODY class="{$stylename} function-add" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<STYLE>
+			{$containerCss}
+		</STYLE>
+ 
+<DIV class="bs-top">
+{BEGIN container_addpage}<DIV class="container" data-container="addpage" data-pageid="{$pageid}" {$addpage_chiddenattr}>
+{BEGIN container_header}<DIV class="col-md-12" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>{BEGIN addheader}
+<H2 data-brick="addheader" data-pageid="{$pageid}" {$addheader_hiddenattr}>
+{$pagetitlelabel seguimiento add}</H2>
+{BEGIN printtabheader}<H4>
+{$printtabheader_text}</H4>{END printtabheader}{END addheader}</DIV>
+{END container_header}{BEGIN container_message}<DIV class="col-md-12" data-container="message" data-pageid="{$pageid}" {$message_chiddenattr}>
+{BEGIN message_block}<DIV class="alert {$message_class}" role="alert" data-brick="message" data-pageid="{$pageid}" {$message_hiddenattr}>
+<H5>
+{$message}</H5>
+<DIV>{BEGIN back_button}<BUTTON class="btn btn-sm btn-default" {$backbutton_attrs}>Back to list</BUTTON> {END back_button}{BEGIN view_page_button}<BUTTON class="btn btn-sm btn-default" {$view_page_button_attrs}>View</BUTTON> {END view_page_button}{BEGIN edit_page_button}<BUTTON class="btn btn-sm btn-default" {$edit_page_button_attrs}>Edit</BUTTON> {END edit_page_button}</DIV></DIV>{END message_block}</DIV>{END container_message}</DIV>
+{END container_addpage}{BEGIN container_fields}<DIV class=" " data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}>
+<DIV role="form" data-brick="addfields" data-pageid="{$pageid}" {$addfields_hiddenattr}>
+<DIV class="container">
+{BEGIN VALORACION1_fieldblock}<DIV class="col-md-6 form-group {$fielddispclass_VALORACION1}" style="width: 99.77%; height: 313px;" data-signal-error-for="VALORACION1{$id}" data-fieldname="VALORACION1">
+<TABLE width="100%" bordercolor="" style="width: 925px;" bgcolor="" border="1" 
+rules="all" cellspacing="1" cellpadding="1">
+  <TBODY>
+  <TR style="height: 105px;">
+    <TD style="width: 240px;" rowspan="1" colspan="1">
+      <P align="center">Digite Codigo caso</P>
+      <P align="center"><BR></P>
+      <DIV align="center">
+      {$CODCASO_editcontrol}</DIV>
+      <P align="center"><BR></P>
+      <P><BR></P></TD>
+    <TD style="width: 687px;" rowspan="1" colspan="2">
+      <P align="center">Nombre docente</P>
+      <P align="center"><BR></P>
+      <DIV align="center">
+      {$DOCENTE_editcontrol}</DIV>
+      <P align="center"><BR></P></TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Cumplimiento de 
+      normas y Políticas educativas de inclusión</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION1_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Actúa de acuerdo 
+      con las normas y políticas nacionales, regionales e institucionales que 
+      regulan el servicio educativo y la profesión docente. En el tema d 
+      inclusión del NCE, Su Actuación muestra que acata las normas 
+    concertadas.</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Conocimiento y 
+      valoración de los estudiantes</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION2_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Hace seguimiento 
+      permanente al aprendizaje del NCE. Organiza su Actividad docente de 
+      acuerdo con diferencias individuales, diversidad cultural y ritmos de 
+      aprendizaje.</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Fundamentación 
+      Pedagógica</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION3_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Sustenta su 
+      práctica pedagógica en enfoques y modelos educativos, pertinentes y 
+      adecuados al contexto institucional y social de los NCE</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Estrategias 
+      pedagógicas de inclusión</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION4_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Aplica estrategias 
+      metodológicas y didácticas para que los estudiantes logren resultados 
+      Satisfactorios. Utiliza de manera creativa y recursiva el material 
+      educativo suministrado en el contexto. Propicia la participación de los 
+      NCE en el aula</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Innovación</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION5_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Muestra mejoría en 
+      su práctica pedagógica a través de estudios, experiencias y proyectos a 
+      favor de la inclusión de los NCE</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;solicitudes de 
+      apoyo</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION6_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Acoge con empeños 
+      las ayudas y asesorías recibidas por la Unidad de Atención Integral y se 
+      comunica de manera permanente para resolver inquietudes respecto los 
+      procesos de inclusión de NCE.</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Mediación de 
+      conflictos en la inclusión de NCE</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION7_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Identifica las 
+      causas que motivan conflictos y el contexto en que surgen en inclusión de 
+      los NCE. Propone alternativas para llegar a acuerdos con base en el manual 
+      de convivencia. Hace seguimiento a los compromisos adquiridos.</TD></TR>
+  <TR>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;Trabajo en 
+    equipo</TD>
+    <TD style="width: 240px;" rowspan="1" colspan="1">&nbsp;
+      <DIV align="center">
+      {$VALORACION8_editcontrol}</DIV></TD>
+    <TD style="width: 447px;" rowspan="1" colspan="1">&nbsp;Se integra al NCE 
+      al trabajo en equipo de estudiantes, docentes y directivos orientados al 
+      logro de objetivos comunes con 
+    NCE</TD></TR></TBODY></TABLE></DIV>{END VALORACION1_fieldblock}</DIV></DIV></DIV>
+{END container_fields}{BEGIN container_bottombuttons}<DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+{BEGIN container_buttons}<DIV class="form-group" data-container="buttons" data-pageid="{$pageid}" {$buttons_chiddenattr}>
+{BEGIN container_leftbuttons}<DIV class="col-md-4" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>{BEGIN addbuttons}{BEGIN save_button}<BUTTON class="btn btn-primary" {$savebutton_attrs}>Save</BUTTON> {END save_button}{BEGIN reset_button}<BUTTON class="btn btn-default" id="resetButton{$id}">Reset</BUTTON> {END reset_button}{BEGIN back_button}<BUTTON class="btn btn-default" id="backButton{$id}">Back to 
+ list</BUTTON> {END back_button}{BEGIN cancel_button}<A class="btn btn-default" id="cancelButton{$id}" href="#">Cancel</A>{END cancel_button}{END addbuttons} 
+</DIV>{END container_leftbuttons}</DIV>{END container_buttons}</DIV>{END container_bottombuttons}</DIV>
+<DIV class="bs-middle">
+<DIV class="bs-topmiddle"></DIV>
+<DIV class="bs-left" {$blockattr_left}></DIV> 
+<DIV class="bs-center"></DIV> 
+<DIV class="bs-right"></DIV></DIV>
+<DIV class="bs-bottom"></DIV>
+{$footer}{END body} </BODY></HTML>

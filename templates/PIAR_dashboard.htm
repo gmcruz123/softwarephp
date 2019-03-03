@@ -1,0 +1,293 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-dashboard" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+<IMG src="images/logopii.png" border="0"> {BEGIN collapse_block}<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+		
+				
+				
+				
+				
+		
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message}<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}<li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+{BEGIN container_center}<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="    "> 
+
+
+<TABLE class="bs-dashboard" style="width: auto;" cellspacing="0" cellpadding="0">
+  <TBODY>
+  <tr>
+
+
+<TD class="bs-dbelement" style="width: auto;" rowspan="1" colspan="1"><FONT size="4"></FONT>
+      <TABLE width="100%" bordercolor="" style="width: 1133px;" bgcolor="" 
+      border="0" rules="" cellspacing="1" cellpadding="1"> 
+        <TBODY>
+        <TR>
+          <TD style="width: 321px;">
+            <P><IMG src="images/PIAR.jpg" border="0"></P></td>
+
+<TD style="width: 34px; height: 5px; white-space: normal;">&nbsp;</td>
+<TD style="width: 780px;"><FONT size="4"></FONT> 
+            <P align="center"><FONT 
+            size="5"><STRONG>PIAR</STRONG></FONT></P>
+            <P align="justify"><FONT size="4">Es la realización de un            
+             proceso de                                                          
+                                                               valoración        
+                             pedagógica del             estudiante que           
+                                      permita                         
+            identificar sus                                                      
+                   gustos,                                     intereses,        
+                                         motivadores y                         
+            características                                                 
+            particulares.                         Para                           
+                                  realizar este proceso, el                      
+                                                   docente             puede 
+            apoyarse en             la                                     
+            observación                                                 
+            sistemática de             sus                                       
+                                  estudiantes, en                         los    
+                                 instrumentos con los que                        
+                         cuente             su                                   
+                                                  institución educativa          
+               para             caracterizar a                         todos los 
+                                                                                 
+                                       estudiantes, o los recomendados           
+              por el                                                 Ministerio  
+                                   de Educación                                  
+                                       Nacional                         para los 
+                        grados y                                     niveles 
+            educativos en el                                      Documento      
+                                           de                                    
+                                     Orientaciones; o con el                     
+                adjunto a                         estas                          
+                       instrucciones,                                     que 
+            aplica                                     para             la       
+                                          educación preescolar,                  
+                   básica                                                        
+                 primaria y media, cuando se                                     
+            identifican niñas y                                                  
+                                               niños con alertas en              
+                       sus procesos de                         desarrollo        
+                                                                 y de            
+                                                 aprendizaje, con el fin de      
+                                                       determinar la necesidad   
+                                  del PIAR.                                      
+                                               Esta valoración                   
+                              la lidera             el             docente de    
+                     aula, pero de                         contar                
+                                 con                                     ello, 
+            es                         fundamental                               
+                              la             participación del docente de        
+                 apoyo             o del                                         
+                                            docente                              
+                   orientador y de otros             profesionales               
+                                                                      que se     
+                    encuentren             en la                                 
+                            institución educativa             y puedan           
+                                                                          
+            aportar a este                                                       
+                                          proceso.</FONT>&nbsp;</P></TD></tr>
+
+
+
+
+
+<tr>
+
+
+<TD style="width: 321px;">&nbsp;</td>
+
+<TD style="width: 34px; height: 5px; white-space: normal;">&nbsp;</TD>
+          <TD style="width: 780px;">&nbsp;</td>
+</tr>
+
+
+
+
+<TR>
+          <TD style="width: 321px;">&nbsp;</TD>
+          <TD style="width: 34px; height: 5px; white-space: normal;">&nbsp;</TD>
+          <TD style="width: 780px;">&nbsp;</TD></TR></TBODY></TABLE></TD>
+    <TD class="bs-dbelement" style="width: 50px;" rowspan="1" colspan="1"></TD></TR>
+  <TR>
+    <TD class="bs-dbelement" style="width: 50px;" rowspan="1" colspan="1"></TD>
+    <TD class="bs-dbelement" style="width: 50px;" rowspan="1" colspan="1"></TD></TR></TBODY></table>
+
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

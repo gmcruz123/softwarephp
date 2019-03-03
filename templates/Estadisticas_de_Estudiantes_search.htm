@@ -1,0 +1,887 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel Estadisticas_de_Estudiantes search}</h2>
+	{BEGIN printtabheader}<h4>{$printtabheader_text}</h4>{END printtabheader}
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN ID_ESTUDIANTE_fieldblock}		
+	<div class="container {$fielddispclass_ID_ESTUDIANTE}" data-fieldname="ID_ESTUDIANTE">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ID_ESTUDIANTE}">
+				{$label Estadisticas_de_Estudiantes ID_ESTUDIANTE}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ID_ESTUDIANTE}
+			</div>
+			<div class="col-md-4" >
+				{$ID_ESTUDIANTE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ID_ESTUDIANTE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ID_ESTUDIANTE_fieldblock}
+	{BEGIN NOMBRE_fieldblock}		
+	<div class="container {$fielddispclass_NOMBRE}" data-fieldname="NOMBRE">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_NOMBRE}">
+				{$label Estadisticas_de_Estudiantes NOMBRE}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_NOMBRE}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBRE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBRE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NOMBRE_fieldblock}
+	{BEGIN FECHANACIMIENTO_fieldblock}		
+	<div class="container {$fielddispclass_FECHANACIMIENTO}" data-fieldname="FECHANACIMIENTO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FECHANACIMIENTO}">
+				{$label Estadisticas_de_Estudiantes FECHANACIMIENTO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FECHANACIMIENTO}
+			</div>
+			<div class="col-md-4" >
+				{$FECHANACIMIENTO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FECHANACIMIENTO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FECHANACIMIENTO_fieldblock}
+	{BEGIN DIRECCION_fieldblock}		
+	<div class="container {$fielddispclass_DIRECCION}" data-fieldname="DIRECCION">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DIRECCION}">
+				{$label Estadisticas_de_Estudiantes DIRECCION}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DIRECCION}
+			</div>
+			<div class="col-md-4" >
+				{$DIRECCION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DIRECCION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DIRECCION_fieldblock}
+	{BEGIN TELEFONO_fieldblock}		
+	<div class="container {$fielddispclass_TELEFONO}" data-fieldname="TELEFONO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_TELEFONO}">
+				{$label Estadisticas_de_Estudiantes TELEFONO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_TELEFONO}
+			</div>
+			<div class="col-md-4" >
+				{$TELEFONO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$TELEFONO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END TELEFONO_fieldblock}
+	{BEGIN DIAGNOSTICO_fieldblock}		
+	<div class="container {$fielddispclass_DIAGNOSTICO}" data-fieldname="DIAGNOSTICO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DIAGNOSTICO}">
+				{$label Estadisticas_de_Estudiantes DIAGNOSTICO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DIAGNOSTICO}
+			</div>
+			<div class="col-md-4" >
+				{$DIAGNOSTICO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DIAGNOSTICO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DIAGNOSTICO_fieldblock}
+	{BEGIN NOMBREDELPADRE_fieldblock}		
+	<div class="container {$fielddispclass_NOMBREDELPADRE}" data-fieldname="NOMBREDELPADRE">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_NOMBREDELPADRE}">
+				{$label Estadisticas_de_Estudiantes NOMBREDELPADRE}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_NOMBREDELPADRE}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBREDELPADRE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBREDELPADRE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NOMBREDELPADRE_fieldblock}
+	{BEGIN NOMBREDELAMADRE_fieldblock}		
+	<div class="container {$fielddispclass_NOMBREDELAMADRE}" data-fieldname="NOMBREDELAMADRE">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_NOMBREDELAMADRE}">
+				{$label Estadisticas_de_Estudiantes NOMBREDELAMADRE}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_NOMBREDELAMADRE}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBREDELAMADRE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBREDELAMADRE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NOMBREDELAMADRE_fieldblock}
+	{BEGIN NOMBREACUDIENTE_fieldblock}		
+	<div class="container {$fielddispclass_NOMBREACUDIENTE}" data-fieldname="NOMBREACUDIENTE">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_NOMBREACUDIENTE}">
+				{$label Estadisticas_de_Estudiantes NOMBREACUDIENTE}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_NOMBREACUDIENTE}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBREACUDIENTE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$NOMBREACUDIENTE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END NOMBREACUDIENTE_fieldblock}
+	{BEGIN HABILIDADES_fieldblock}		
+	<div class="container {$fielddispclass_HABILIDADES}" data-fieldname="HABILIDADES">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_HABILIDADES}">
+				{$label Estadisticas_de_Estudiantes HABILIDADES}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_HABILIDADES}
+			</div>
+			<div class="col-md-4" >
+				{$HABILIDADES_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$HABILIDADES_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END HABILIDADES_fieldblock}
+	{BEGIN LIMITACIONES_fieldblock}		
+	<div class="container {$fielddispclass_LIMITACIONES}" data-fieldname="LIMITACIONES">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_LIMITACIONES}">
+				{$label Estadisticas_de_Estudiantes LIMITACIONES}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_LIMITACIONES}
+			</div>
+			<div class="col-md-4" >
+				{$LIMITACIONES_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$LIMITACIONES_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END LIMITACIONES_fieldblock}
+	{BEGIN DOCENTEACARGO_fieldblock}		
+	<div class="container {$fielddispclass_DOCENTEACARGO}" data-fieldname="DOCENTEACARGO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DOCENTEACARGO}">
+				{$label Estadisticas_de_Estudiantes DOCENTEACARGO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DOCENTEACARGO}
+			</div>
+			<div class="col-md-4" >
+				{$DOCENTEACARGO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DOCENTEACARGO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DOCENTEACARGO_fieldblock}
+	{BEGIN FOTODEPERFIL_fieldblock}		
+	<div class="container {$fielddispclass_FOTODEPERFIL}" data-fieldname="FOTODEPERFIL">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FOTODEPERFIL}">
+				{$label Estadisticas_de_Estudiantes FOTODEPERFIL}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FOTODEPERFIL}
+			</div>
+			<div class="col-md-4" >
+				{$FOTODEPERFIL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FOTODEPERFIL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FOTODEPERFIL_fieldblock}
+	{BEGIN FISICALOGRO_fieldblock}		
+	<div class="container {$fielddispclass_FISICALOGRO}" data-fieldname="FISICALOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FISICALOGRO}">
+				{$label Estadisticas_de_Estudiantes FISICALOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FISICALOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$FISICALOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FISICALOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FISICALOGRO_fieldblock}
+	{BEGIN FISICAINDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_FISICAINDICADOR}" data-fieldname="FISICAINDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FISICAINDICADOR}">
+				{$label Estadisticas_de_Estudiantes FISICAINDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FISICAINDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$FISICAINDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FISICAINDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FISICAINDICADOR_fieldblock}
+	{BEGIN FISICAESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_FISICAESTRATEGIA}" data-fieldname="FISICAESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FISICAESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes FISICAESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FISICAESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$FISICAESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FISICAESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FISICAESTRATEGIA_fieldblock}
+	{BEGIN FISICAHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_FISICAHERRAMIENTAS}" data-fieldname="FISICAHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_FISICAHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes FISICAHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_FISICAHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$FISICAHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$FISICAHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END FISICAHERRAMIENTAS_fieldblock}
+	{BEGIN COMUNICATIVALOGRO_fieldblock}		
+	<div class="container {$fielddispclass_COMUNICATIVALOGRO}" data-fieldname="COMUNICATIVALOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMUNICATIVALOGRO}">
+				{$label Estadisticas_de_Estudiantes COMUNICATIVALOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMUNICATIVALOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVALOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVALOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMUNICATIVALOGRO_fieldblock}
+	{BEGIN COMUNICATIVAINDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_COMUNICATIVAINDICADOR}" data-fieldname="COMUNICATIVAINDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMUNICATIVAINDICADOR}">
+				{$label Estadisticas_de_Estudiantes COMUNICATIVAINDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMUNICATIVAINDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVAINDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVAINDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMUNICATIVAINDICADOR_fieldblock}
+	{BEGIN COMUNICATIVAESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_COMUNICATIVAESTRATEGIA}" data-fieldname="COMUNICATIVAESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMUNICATIVAESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes COMUNICATIVAESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMUNICATIVAESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVAESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVAESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMUNICATIVAESTRATEGIA_fieldblock}
+	{BEGIN COMUNICATIVAHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_COMUNICATIVAHERRAMIENTAS}" data-fieldname="COMUNICATIVAHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMUNICATIVAHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes COMUNICATIVAHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMUNICATIVAHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVAHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMUNICATIVAHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMUNICATIVAHERRAMIENTAS_fieldblock}
+	{BEGIN DCLOGRO_fieldblock}		
+	<div class="container {$fielddispclass_DCLOGRO}" data-fieldname="DCLOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DCLOGRO}">
+				{$label Estadisticas_de_Estudiantes DCLOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DCLOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$DCLOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DCLOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DCLOGRO_fieldblock}
+	{BEGIN DCINDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_DCINDICADOR}" data-fieldname="DCINDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DCINDICADOR}">
+				{$label Estadisticas_de_Estudiantes DCINDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DCINDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$DCINDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DCINDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DCINDICADOR_fieldblock}
+	{BEGIN CDESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_CDESTRATEGIA}" data-fieldname="CDESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_CDESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes CDESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_CDESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$CDESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$CDESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END CDESTRATEGIA_fieldblock}
+	{BEGIN DCHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_DCHERRAMIENTAS}" data-fieldname="DCHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_DCHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes DCHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_DCHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$DCHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DCHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DCHERRAMIENTAS_fieldblock}
+	{BEGIN PCLOGRO_fieldblock}		
+	<div class="container {$fielddispclass_PCLOGRO}" data-fieldname="PCLOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_PCLOGRO}">
+				{$label Estadisticas_de_Estudiantes PCLOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_PCLOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$PCLOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PCLOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PCLOGRO_fieldblock}
+	{BEGIN PCINDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_PCINDICADOR}" data-fieldname="PCINDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_PCINDICADOR}">
+				{$label Estadisticas_de_Estudiantes PCINDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_PCINDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$PCINDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PCINDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PCINDICADOR_fieldblock}
+	{BEGIN PCESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_PCESTRATEGIA}" data-fieldname="PCESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_PCESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes PCESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_PCESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$PCESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PCESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PCESTRATEGIA_fieldblock}
+	{BEGIN PCHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_PCHERRAMIENTAS}" data-fieldname="PCHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_PCHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes PCHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_PCHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$PCHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$PCHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END PCHERRAMIENTAS_fieldblock}
+	{BEGIN ARTISTICALOGRO_fieldblock}		
+	<div class="container {$fielddispclass_ARTISTICALOGRO}" data-fieldname="ARTISTICALOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ARTISTICALOGRO}">
+				{$label Estadisticas_de_Estudiantes ARTISTICALOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ARTISTICALOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICALOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICALOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ARTISTICALOGRO_fieldblock}
+	{BEGIN ARTISTICAINDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_ARTISTICAINDICADOR}" data-fieldname="ARTISTICAINDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ARTISTICAINDICADOR}">
+				{$label Estadisticas_de_Estudiantes ARTISTICAINDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ARTISTICAINDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICAINDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICAINDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ARTISTICAINDICADOR_fieldblock}
+	{BEGIN ARTISTICAESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_ARTISTICAESTRATEGIA}" data-fieldname="ARTISTICAESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ARTISTICAESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes ARTISTICAESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ARTISTICAESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICAESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICAESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ARTISTICAESTRATEGIA_fieldblock}
+	{BEGIN ARTISTICAHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_ARTISTICAHERRAMIENTAS}" data-fieldname="ARTISTICAHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_ARTISTICAHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes ARTISTICAHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_ARTISTICAHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICAHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ARTISTICAHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ARTISTICAHERRAMIENTAS_fieldblock}
+	{BEGIN SALOGRO_fieldblock}		
+	<div class="container {$fielddispclass_SALOGRO}" data-fieldname="SALOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_SALOGRO}">
+				{$label Estadisticas_de_Estudiantes SALOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_SALOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$SALOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SALOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SALOGRO_fieldblock}
+	{BEGIN SAINNDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_SAINNDICADOR}" data-fieldname="SAINNDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_SAINNDICADOR}">
+				{$label Estadisticas_de_Estudiantes SAINNDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_SAINNDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$SAINNDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SAINNDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SAINNDICADOR_fieldblock}
+	{BEGIN SAESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_SAESTRATEGIA}" data-fieldname="SAESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_SAESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes SAESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_SAESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$SAESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SAESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SAESTRATEGIA_fieldblock}
+	{BEGIN SAHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_SAHERRAMIENTAS}" data-fieldname="SAHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_SAHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes SAHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_SAHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$SAHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SAHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SAHERRAMIENTAS_fieldblock}
+	{BEGIN COMPLOGRO_fieldblock}		
+	<div class="container {$fielddispclass_COMPLOGRO}" data-fieldname="COMPLOGRO">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMPLOGRO}">
+				{$label Estadisticas_de_Estudiantes COMPLOGRO}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMPLOGRO}
+			</div>
+			<div class="col-md-4" >
+				{$COMPLOGRO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMPLOGRO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMPLOGRO_fieldblock}
+	{BEGIN COMPINDICADOR_fieldblock}		
+	<div class="container {$fielddispclass_COMPINDICADOR}" data-fieldname="COMPINDICADOR">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMPINDICADOR}">
+				{$label Estadisticas_de_Estudiantes COMPINDICADOR}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMPINDICADOR}
+			</div>
+			<div class="col-md-4" >
+				{$COMPINDICADOR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMPINDICADOR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMPINDICADOR_fieldblock}
+	{BEGIN COMPESTRATEGIA_fieldblock}		
+	<div class="container {$fielddispclass_COMPESTRATEGIA}" data-fieldname="COMPESTRATEGIA">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMPESTRATEGIA}">
+				{$label Estadisticas_de_Estudiantes COMPESTRATEGIA}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMPESTRATEGIA}
+			</div>
+			<div class="col-md-4" >
+				{$COMPESTRATEGIA_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMPESTRATEGIA_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMPESTRATEGIA_fieldblock}
+	{BEGIN COMPHERRAMIENTAS_fieldblock}		
+	<div class="container {$fielddispclass_COMPHERRAMIENTAS}" data-fieldname="COMPHERRAMIENTAS">
+		<div class="form-group">
+			<label class="col-md-2 control-label" for="{$labelfor_COMPHERRAMIENTAS}">
+				{$label Estadisticas_de_Estudiantes COMPHERRAMIENTAS}
+			</label>
+			<div class="col-md-2 bs-srchoption" >
+				{$searchtype_COMPHERRAMIENTAS}
+			</div>
+			<div class="col-md-4" >
+				{$COMPHERRAMIENTAS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COMPHERRAMIENTAS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COMPHERRAMIENTAS_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container form-horizontal   "> 
+
+
+
+
+{BEGIN container_bbuttons}
+<div {$bbuttons_chiddenattr} data-pageid="{$pageid}" data-container="bbuttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-10 col-md-offset-2"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

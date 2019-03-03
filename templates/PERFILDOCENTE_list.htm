@@ -1,0 +1,531 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+<IMG src="images/logopii.png" border="0"> {BEGIN collapse_block}<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+				{BEGIN asearch_link}<li><a href="PERFILDOCENTE_search.php" {$advsearchlink_attrs}>Advanced search</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				
+				
+		
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Login</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message}<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}<li><a href="#" {$logoutlink_attrs}>Log out</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Admin Area</a></li>
+		{END adminarea_link}
+
+
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+<span class="input-group-btn">
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}<li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+
+{BEGIN container_gridcontrols}<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN record_controls_block}<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+			</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+
+{BEGIN details_found}<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+{BEGIN container_tabs}<div {$tabs_chiddenattr} data-pageid="{$pageid}" data-container="tabs" class="    "> 
+
+{BEGIN grid_tabs}<div {$bsgrid_tabs_hiddenattr} data-pageid="{$pageid}" data-brick="bsgrid_tabs">
+<ul class="nav nav-tabs">
+{$grid_tabs_content}
+</ul>
+</div>
+{END grid_tabs}
+
+
+
+</div>
+{END container_tabs}
+
+
+
+{BEGIN container_messagerow}<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+{BEGIN container_center}<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}<style>
+	.bs-gridcell[data-field=ID_DOCENTE]:before {
+		content: "{$label PERFILDOCENTE ID_DOCENTE}";
+	}
+	.bs-gridcell[data-field=NOMBRES]:before {
+		content: "{$label PERFILDOCENTE NOMBRES}";
+	}
+	.bs-gridcell[data-field=CELULAR]:before {
+		content: "{$label PERFILDOCENTE CELULAR}";
+	}
+	.bs-gridcell[data-field=CORREO]:before {
+		content: "{$label PERFILDOCENTE CORREO}";
+	}
+	.bs-gridcell[data-field=ASIGNATURA]:before {
+		content: "{$label PERFILDOCENTE ASIGNATURA}";
+	}
+	.bs-gridcell[data-field=PROFESION]:before {
+		content: "{$label PERFILDOCENTE PROFESION}";
+	}
+	.bs-gridcell[data-field=FECHACUMPLEA_OS]:before {
+		content: "{$label PERFILDOCENTE FECHACUMPLEA_OS}";
+	}
+	.bs-gridcell[data-field=ESTADO]:before {
+		content: "{$label PERFILDOCENTE ESTADO}";
+	}
+	.bs-gridcell[data-field=FECHADEREGISTRO]:before {
+		content: "{$label PERFILDOCENTE FECHADEREGISTRO}";
+	}
+	.bs-gridcell[data-field=CEDULA]:before {
+		content: "{$label PERFILDOCENTE CEDULA}";
+	}
+	.bs-gridcell[data-field=PASS]:before {
+		content: "{$label PERFILDOCENTE PASS}";
+	}
+	.bs-gridcell[data-field=FOTOPERFIL]:before {
+		content: "{$label PERFILDOCENTE FOTOPERFIL}";
+	}
+	.bs-gridcell[data-field=TOKEN]:before {
+		content: "{$label PERFILDOCENTE TOKEN}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}{BEGIN listIcons_column}<TH style="white-space: normal; background-image: none; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" ieditcont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+									
+																		
+									{BEGIN TOKEN_fieldheadercolumn}<th class="rnr-gridfieldlabel {$TOKEN_class}" data-field=TOKEN>
+									{BEGIN TOKEN_fieldheader}<span {$TOKEN_orderlinkattrs}>
+											{$label PERFILDOCENTE TOKEN}
+										</span>
+									{END TOKEN_fieldheader}
+									</th>
+									{END TOKEN_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FOTOPERFIL_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$FOTOPERFIL_class}" style="white-space: normal; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" data-field="FOTOPERFIL">
+      <P align="center"></P><FONT color="#ffffff">
+      <DIV align="center">
+      {$label PERFILDOCENTE FOTOPERFIL}</DIV></FONT> 
+      <P></P></th>
+									{END FOTOPERFIL_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CEDULA_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$CEDULA_class}" style="white-space: normal; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" data-field="CEDULA">
+      <P align="center"></P><FONT color="#ffffff">
+      <DIV align="center">
+      {$label PERFILDOCENTE CEDULA}</DIV></FONT> 
+
+      <P></P></th>
+									{END CEDULA_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN NOMBRES_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$NOMBRES_class}" style="white-space: normal; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" data-field="NOMBRES">
+      <P align="center">
+      <DIV align="center"><FONT color="#ffffff">
+      {$label PERFILDOCENTE NOMBRES}</FONT></DIV>
+      <P></P></th>
+									{END NOMBRES_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN CELULAR_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$CELULAR_class}" style="white-space: normal; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" data-field="CELULAR">
+      <P align="center"></P><FONT color="#ffffff">
+      <DIV align="center">
+      {$label PERFILDOCENTE CELULAR}</DIV></FONT> 
+
+      <P></P></th>
+									{END CELULAR_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN FECHADEREGISTRO_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$FECHADEREGISTRO_class}" style="white-space: normal; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" data-field="FECHADEREGISTRO">
+      <P align="center">
+      <DIV align="center"><FONT color="#ffffff">
+      {$label PERFILDOCENTE FECHADEREGISTRO}</FONT></DIV>
+      <P></P></th>
+									{END FECHADEREGISTRO_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ESTADO_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$ESTADO_class}" style="white-space: normal; background-color: rgb(92, 49, 118);" rowspan="1" colspan="1" data-field="ESTADO">
+      <DIV align="center"><BR></DIV><FONT color="#ffffff">
+      <DIV align="center">
+      {$label PERFILDOCENTE ESTADO}</DIV></FONT></th>
+									{END ESTADO_fieldheadercolumn}
+									
+									
+									
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}{BEGIN listIcons_column}<TD class="bs-gridicons" rowspan="1" colspan="1" ieditcont="all" {$rowstyle} {$recordattrs}>{BEGIN edit_column}{BEGIN edit_link}<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Edit"></a>
+	{END edit_link}
+	{END edit_column}
+
+		
+	<span data-hidden {$ieditbuttonsholder_attrs}></span>
+
+	
+		{BEGIN view_column}{BEGIN view_link}<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="View"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+	
+	
+
+	{BEGIN TOKEN_fieldcolumn}<td class="bs-gridcell {$TOKEN_class}"  data-field=TOKEN {$rowstyle} {$recordattrs}>
+		{$TOKEN_value}
+	</td>
+{END TOKEN_fieldcolumn}
+
+
+	{BEGIN FOTOPERFIL_fieldcolumn}<TD class="bs-gridcell {$FOTOPERFIL_class}" rowspan="1" colspan="1" data-field="FOTOPERFIL" {$rowstyle} {$recordattrs}>
+      <DIV align="center">
+      {$FOTOPERFIL_value}
+	</DIV></td>
+{END FOTOPERFIL_fieldcolumn}
+
+
+	{BEGIN CEDULA_fieldcolumn}<TD class="bs-gridcell {$CEDULA_class}" rowspan="1" colspan="1" data-field="CEDULA" {$rowstyle} {$recordattrs}>
+      <DIV align="center">
+      {$CEDULA_value}
+	</DIV></td>
+{END CEDULA_fieldcolumn}
+
+
+	{BEGIN NOMBRES_fieldcolumn}<TD class="bs-gridcell {$NOMBRES_class}" rowspan="1" colspan="1" data-field="NOMBRES" {$rowstyle} {$recordattrs}>
+      <DIV align="center">
+      {$NOMBRES_value}
+	</DIV></td>
+{END NOMBRES_fieldcolumn}
+
+
+	{BEGIN CELULAR_fieldcolumn}<TD class="bs-gridcell {$CELULAR_class}" rowspan="1" colspan="1" data-field="CELULAR" {$rowstyle} {$recordattrs}>
+      <DIV align="center">
+      {$CELULAR_value}
+	</DIV></td>
+{END CELULAR_fieldcolumn}
+
+
+	{BEGIN FECHADEREGISTRO_fieldcolumn}<TD class="bs-gridcell {$FECHADEREGISTRO_class}" rowspan="1" colspan="1" data-field="FECHADEREGISTRO" {$rowstyle} {$recordattrs}>
+      <DIV align="center"><STRONG></STRONG><STRONG>
+      {$FECHADEREGISTRO_value}
+	</STRONG></DIV></td>
+{END FECHADEREGISTRO_fieldcolumn}
+
+
+	{BEGIN ESTADO_fieldcolumn}<TD class="bs-gridcell {$ESTADO_class}" rowspan="1" colspan="1" data-field="ESTADO" {$rowstyle} {$recordattrs}>
+      <DIV align="center"><STRONG></STRONG><STRONG>
+      {$ESTADO_value}
+	</STRONG></DIV></td>
+{END ESTADO_fieldcolumn}
+
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
